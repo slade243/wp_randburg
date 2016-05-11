@@ -8,7 +8,7 @@ get_header();
 $pages = get_pages(array('child_of' => get_the_ID()));
 ?>
 
-<div id="categories-grid">
+<!--  <div id="categories-grid">
   <ul>
     <?php foreach ( $pages as $page ) : ?>
         <li class="item">
@@ -19,6 +19,6 @@ $pages = get_pages(array('child_of' => get_the_ID()));
         </li>
     <?php endforeach; ?>
   </ul>
-</div>
-
+</div> 
+ -->
 <?php get_footer(); ?>
