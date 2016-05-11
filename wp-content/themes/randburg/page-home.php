@@ -7,8 +7,12 @@ get_header();
 
 $pages = get_pages(array('exclude' => get_the_ID()));
 ?>
+<div class="slideshow">
+	<?php do_action('slideshow_deploy', '27'); ?>
+</div>
 
-<div id="categories-grid">
+
+<!--  <div id="categories-grid">
   <ul>
     <?php foreach ( $pages as $page ) : ?>
         <li class="item">
@@ -19,6 +23,6 @@ $pages = get_pages(array('exclude' => get_the_ID()));
         </li>
     <?php endforeach; ?>
   </ul>
-</div>
-
+</div> 
+ -->
 <?php get_footer(); ?>

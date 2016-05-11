@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
   get_header();
 ?>
 <div id="primary" class="content-area">
@@ -18,3 +19,11 @@
 <?php
   get_footer();
  ?>
+=======
+/**
+ * Template Name: Standard
+ *
+ */
+ 
+?>
+>>>>>>> origin/master
