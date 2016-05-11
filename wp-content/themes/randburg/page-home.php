@@ -5,7 +5,7 @@
 
 get_header();
 
-$pages = get_pages(array('child_of' => get_the_ID()));
+$pages = get_pages(array('exclude' => get_the_ID()));
 ?>
 
 <div id="categories-grid">
