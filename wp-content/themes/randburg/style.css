@@ -44,7 +44,52 @@ html, body {
   position: absolute;
   width: 50%;
   height: 5px;
-  background-color: red;
   bottom: 0;
   left: 10%;
+}
+
+#header .menu {
+	margin-right: 50px;
+	margin-bottom: 50px;
+	position: absolute;
+    top: 50px;
+    right: 16px;
+    font-size: 18px;
+}
+
+#header img {
+	margin-top: 50px;
+	margin-left: 50px;
+	height: 75px;
+	width: 250px;
+}
+
+#header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+}
+
+#header ul li {
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 5;
+    border-left: 1px solid #ebebeb;
+}
+
+#header li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#header li a:hover {
+    border-bottom: 3px solid #ff0000;
 }

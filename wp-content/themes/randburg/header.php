@@ -10,6 +10,6 @@
   <body>
     <div id="wrapper">
       <div id="header">
-        <h1>HEADER</h1>
+        <img src="wp-includes/images/randburg-logo.png" alt="Custom image" class="customImage" />
         <?php wp_nav_menu(array('menu' => 'Main Menu')); ?>
       </div>
