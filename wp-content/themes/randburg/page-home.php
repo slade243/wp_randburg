@@ -7,6 +7,10 @@ get_header();
 
 $pages = get_pages(array('child_of' => get_the_ID()));
 ?>
+<div class="slideshow">
+	<?php do_action('slideshow_deploy', '27'); ?>
+</div>
+
 
 <!--  <div id="categories-grid">
   <ul>
