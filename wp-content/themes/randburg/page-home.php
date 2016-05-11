@@ -4,6 +4,10 @@
 */
 
 get_header();
-
-get_footer();
 ?>
+
+<div id="catories-grid">
+  
+</div>
+
+<?php get_footer(); ?>
