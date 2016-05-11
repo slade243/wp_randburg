@@ -11,4 +11,5 @@
     <div id="wrapper">
       <div id="header">
         <h1>HEADER</h1>
+        <?php wp_nav_menu(array('menu' => 'Main Menu')); ?>
       </div>
