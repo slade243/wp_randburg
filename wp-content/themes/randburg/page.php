@@ -19,11 +19,4 @@
 <?php
   get_footer();
  ?>
-=======
-/**
- * Template Name: Standard
- *
- */
- 
-?>
->>>>>>> origin/master
+

@@ -99,3 +99,18 @@ html, body {
 	border-top: 1px solid #b1b1b1;
 	background-color: #e8e8e8;
 }
+
+.content {
+	height: 500px;
+	background-color: red; 
+}
+
+.content .services {
+	height: 100px;
+	background-color: yellow;
+}
+
+.twitter_static {
+	height: 150px;
+	background-color: grey;
+}
