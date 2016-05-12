@@ -1,3 +1,5 @@
 <div class="bottomBody">
-	Lorem Ipsum
+	<?php
+		echo do_shortcode('[custom-twitter-feeds screenname=Zer0D4y num=9]');
+	?> 
 </div>
