@@ -51,7 +51,7 @@ function ctf_return_feed_types( $val ) {
 add_action( 'ctf_admin_upgrade_note', 'ctf_update_note' );
 function ctf_update_note() {
     ?>
-    <span class="ctf_note"> - <a href="https://smashballoon.com/custom-twitter-feed/" target="_blank">Pro version coming soon</a></span>
+    <span class="ctf_note"> - <a href="https://smashballoon.com/custom-twitter-feeds/" target="_blank">Pro version coming soon</a></span>
     <?php
 }
 
@@ -60,7 +60,7 @@ function ctf_usertimeline_error_message( $args )
 { //sbi_notice sbi_user_id_error
     if ( $args['name'] == 'usertimeline') : ?>
         <div class="ctf_notice ctf_usertimeline_error">
-            <?php _e( "<p>Please use a single screenname or Twitter handle of numbers and letters. If you would like to use more than one screen name for your feed, please upgrade to our <a href='https://smashballoon.com/custom-twitter-feed/' target='_blank'>Pro version</a> (coming soon).</p>" ); ?>
+            <?php _e( "<p>Please use a single screenname or Twitter handle of numbers and letters. If you would like to use more than one screen name for your feed, please upgrade to our <a href='https://smashballoon.com/custom-twitter-feeds/' target='_blank'>Pro version</a> (coming soon).</p>" ); ?>
         </div>
     <?php endif;
 }
@@ -69,7 +69,7 @@ add_action( 'ctf_admin_feed_settings_search_extra', 'ctf_hashtag_error_message' 
 function ctf_hashtag_error_message() {
     ?>
     <div class="ctf_notice ctf_search_error">
-        <?php _e( "<p>Please use a single hashtag of numbers and letters. If you would like to use more than one hashtag or use search terms for your feed, please upgrade to our <a href='https://smashballoon.com/custom-twitter-feed/' target='_blank'>Pro version</a> (coming soon).</p>" ); ?>
+        <?php _e( "<p>Please use a single hashtag of numbers and letters. If you would like to use more than one hashtag or use search terms for your feed, please upgrade to our <a href='https://smashballoon.com/custom-twitter-feeds/' target='_blank'>Pro version</a> (coming soon).</p>" ); ?>
     </div>
     <?php
 }

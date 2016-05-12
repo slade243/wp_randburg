@@ -21,4 +21,4 @@ settings_errors(); ?>
     <a id="load"></a>
     <?php do_settings_sections( 'ctf_style_load' ); // matches the section name ?>
 </form>
-<p><i class="fa fa-chevron-circle-right" aria-hidden="true"></i>&nbsp; <?php _e('Next Step: <a href="?page=custom-twitter-feed&tab=display">Display your Feed</a>'); ?></p>
+<p><i class="fa fa-chevron-circle-right" aria-hidden="true"></i>&nbsp; <?php _e('Next Step: <a href="?page=custom-twitter-feeds&tab=display">Display your Feed</a>'); ?></p>

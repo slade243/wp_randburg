@@ -1,8 +1,3 @@
-<?php 
-/**
-* Template Name: Homepage
-*/
-?>
-<div class="test">
-
+<div class="bottomBody">
+	Lorem Ipsum
 </div>

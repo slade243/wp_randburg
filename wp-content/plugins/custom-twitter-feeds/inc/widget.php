@@ -2,23 +2,23 @@
 /**
  * Class CtfWidget
  *
- * Creates a text widget with the custom-twitter-feed shortcode inside
+ * Creates a text widget with the custom-twitter-feeds shortcode inside
  */
 
 class CtfWidget extends WP_Widget
 {
     function __construct() {
         parent::__construct(
-            'custom-twitter-feed-widget',
-            __( 'Custom Twitter Feed', 'custom-twitter-feed' ),
-            array( 'description' => __( 'Display your Twitter feed', 'custom-twitter-feed' ), )
+            'custom-twitter-feeds-widget',
+            __( 'Custom Twitter Feeds', 'custom-twitter-feeds' ),
+            array( 'description' => __( 'Display your Twitter feed', 'custom-twitter-feeds' ), )
         );
     }
 
     public function widget( $args, $instance ) {
 
         $title = isset( $instance['title'] ) ? apply_filters( 'widget_title', $instance['title'] ) : '';
-        $content = isset( $instance['content'] ) ? esc_html( $instance['content'] ) : '[custom-twitter-feed]';
+        $content = isset( $instance['content'] ) ? esc_html( $instance['content'] ) : '[custom-twitter-feeds]';
 
         echo $args['before_widget'];
 
@@ -34,7 +34,7 @@ class CtfWidget extends WP_Widget
     public function form( $instance ) {
 
         $title = isset( $instance['title'] ) ? $instance['title'] : '';
-        $content = isset ( $instance['content'] ) ? esc_html( $instance['content'] ) : '[custom-twitter-feed]';
+        $content = isset ( $instance['content'] ) ? esc_html( $instance['content'] ) : '[custom-twitter-feeds]';
         ?>
         <p>
             <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php _e( 'Title:' ); ?></label>

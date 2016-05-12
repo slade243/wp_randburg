@@ -1,15 +1,15 @@
-<h3><?php _e( 'Need help?', 'custom-twitter-feed' ); ?></h3>
+<h3><?php _e( 'Need help?', 'custom-twitter-feeds' ); ?></h3>
 
-<p><i class="fa fa-life-ring" aria-hidden="true"></i>&nbsp; <?php _e( 'Check out our ', 'custom-twitter-feed'); ?><a href="https://smashballoon.com/custom-twitter-feed/free/" target="_blank"><?php _e( 'setup directions', 'custom-twitter-feed' ); ?></a> <?php _e( 'for a step-by-step guide on how to setup and use the plugin', 'custom-twitter-feed' ); ?>.</p>
+<p><i class="fa fa-life-ring" aria-hidden="true"></i>&nbsp; <?php _e( 'Check out our ', 'custom-twitter-feeds'); ?><a href="https://smashballoon.com/custom-twitter-feeds/free/" target="_blank"><?php _e( 'setup directions', 'custom-twitter-feeds' ); ?></a> <?php _e( 'for a step-by-step guide on how to setup and use the plugin', 'custom-twitter-feeds' ); ?>.</p>
 
-<p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp; <?php _e( 'Have a problem? Submit a ', 'custom-twitter-feed' ); ?><a href="https://smashballoon.com/custom-twitter-feed/support/" target="_blank"><?php _e( 'support ticket', 'custom-twitter-feed' ); ?></a> <?php _e( 'on our website', 'custom-twitter-feed' ); ?>.  <?php _e( 'Please include your <b>System Info</b> below with all support requests.', 'custom-twitter-feed'  ); ?></p>
+<p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp; <?php _e( 'Have a problem? Submit a ', 'custom-twitter-feeds' ); ?><a href="https://smashballoon.com/custom-twitter-feeds/support/" target="_blank"><?php _e( 'support ticket', 'custom-twitter-feeds' ); ?></a> <?php _e( 'on our website', 'custom-twitter-feeds' ); ?>.  <?php _e( 'Please include your <b>System Info</b> below with all support requests.', 'custom-twitter-feeds'  ); ?></p>
 
 <br />
-<h3><?php _e('System Info', 'custom-twitter-feed' ); ?> &nbsp; <i style="color: #666; font-size: 11px; font-weight: normal;"><?php _e( 'Click the text below to select all', 'custom-twitter-feed' ); ?></i></h3>
+<h3><?php _e('System Info', 'custom-twitter-feeds' ); ?> &nbsp; <i style="color: #666; font-size: 11px; font-weight: normal;"><?php _e( 'Click the text below to select all', 'custom-twitter-feeds' ); ?></i></h3>
 
 <textarea readonly="readonly" onclick="this.focus();this.select()" title="To copy, click the field then press Ctrl + C (PC) or Cmd + C (Mac)." style="width: 70%; height: 500px; white-space: pre; font-family: Menlo,Monaco,monospace;">
 ## SITE/SERVER INFO: ##
-Plugin Version:           <?php echo CTF_TITLE . ' v' . CTFVER . "\n"; ?>
+Plugin Version:           <?php echo CTF_TITLE . ' v' . CTF_VERSION . "\n"; ?>
 Site URL:                 <?php echo site_url() . "\n"; ?>
 Home URL:                 <?php echo home_url() . "\n"; ?>
 WordPress Version:        <?php echo get_bloginfo( 'version' ) . "\n"; ?>

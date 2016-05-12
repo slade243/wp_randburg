@@ -21,10 +21,10 @@ class CtfAdmin
     public function add_menu()
     {
         add_menu_page(
-            'Twitter Feed',
-            'Twitter Feed',
+            'Twitter Feeds',
+            'Twitter Feeds',
             'manage_options',
-            'custom-twitter-feed',
+            'custom-twitter-feeds',
             array( $this, 'create_options_page' ),
             '',
             99
@@ -66,8 +66,8 @@ class CtfAdmin
         <input name="<?php echo 'ctf_configure'.'[have_own_tokens]'; ?>" id="ctf_have_own_tokens" type="checkbox" <?php if ( $option_checked ) echo "checked"; ?> />
         <label for="ctf_have_own_tokens" class="ctf_checkbox"><?php _e( 'Or, manually enter my own Twitter app information' ); ?></label>
         <span class="ctf-tooltip-wrap">
-            <a class="ctf-tooltip-link" href="JavaScript:void(0);"><?php _e( "What is this?", 'custom-twitter-feed' ); ?></a>
-            <p class="ctf-tooltip ctf-more-info"><?php _e( 'Check this box if you would like to manually enter the information from your own <a href="https://apps.twitter.com/" target="_blank">Twitter app</a>', 'custom-twitter-feed' ); ?>.</p>
+            <a class="ctf-tooltip-link" href="JavaScript:void(0);"><?php _e( "What is this?", 'custom-twitter-feeds' ); ?></a>
+            <p class="ctf-tooltip ctf-more-info"><?php _e( 'Check this box if you would like to manually enter the information from your own <a href="https://smashballoon.com/custom-twitter-feeds/docs/create-twitter-app/" target="_blank">Twitter app</a>', 'custom-twitter-feeds' ); ?>.</p>
         </span>
         <?php
     }
@@ -83,20 +83,24 @@ class CtfAdmin
         <div id="ctf_config">
 
         <?php if ( isset( $access_token_data['oauth_token'] ) ) : ?>
-            <a href="<?php echo OAUTH_PROCESSOR_URL . admin_url( 'admin.php?page=custom-twitter-feed' ); ?>" id="ctf-get-token"><i class="fa fa-twitter"></i><?php _e( 'Log in to Twitter and get my Access Token and Secret' ); ?></a>
+            <a href="<?php echo OAUTH_PROCESSOR_URL . admin_url( 'admin.php?page=custom-twitter-feeds' ); ?>" id="ctf-get-token"><i class="fa fa-twitter"></i><?php _e( 'Log in to Twitter and get my Access Token and Secret' ); ?></a>
+                <a class="ctf-tooltip-link" href="https://smashballoon.com/custom-twitter-feeds/token/" target="_blank"><?php _e( "Button not working?", 'custom-twitter-feeds' ); ?></a>
+                
             <input type="hidden" id="ctf-retrieved-access-token" value="<?php echo esc_html( sanitize_text_field( $access_token_data['oauth_token'] ) ); ?>">
             <input type="hidden" id="ctf-retrieved-access-token-secret" value="<?php echo esc_html( sanitize_text_field( $access_token_data['oauth_token_secret'] ) ); ?>">
             <input type="hidden" id="ctf-retrieved-default-screen-name" value="<?php echo esc_html( sanitize_text_field( $access_token_data['screen_name'] ) ); ?>">
 
         <?php elseif ( isset( $access_token_data['error'] ) && ! isset( $access_token_data['oauth_token'] ) ) : ?>
 
-            <p class="ctf_notice"><?php _e( 'There was an error with retrieving your access tokens. Please <a href="https://smashballoon.com/custom-twitter-feed/support/" target="_blank">contact support</a> for assistance.' ); ?></p>
-            <a href="<?php echo OAUTH_PROCESSOR_URL . admin_url( 'admin.php?page=custom-twitter-feed' ); ?>" id="ctf-get-token"><i class="fa fa-twitter"></i><?php _e( 'Log in to Twitter and get my Access Token and Secret' ); ?></a>
+            <p class="ctf_notice"><?php _e( 'There was an error with retrieving your access tokens. Please <a href="https://smashballoon.com/custom-twitter-feeds/token/" target="_blank">use this tool</a> to get your access token and secret.' ); ?></p><br>
+            <a href="<?php echo OAUTH_PROCESSOR_URL . admin_url( 'admin.php?page=custom-twitter-feeds' ); ?>" id="ctf-get-token"><i class="fa fa-twitter"></i><?php _e( 'Log in to Twitter and get my Access Token and Secret' ); ?></a>
+            <a class="ctf-tooltip-link" href="https://smashballoon.com/custom-twitter-feeds/token/" target="_blank"><?php _e( "Button not working?", 'custom-twitter-feeds' ); ?></a>
 
         <?php else : ?>
 
-            <a href="<?php echo OAUTH_PROCESSOR_URL . admin_url( 'admin.php?page=custom-twitter-feed' ); ?>" id="ctf-get-token"><i class="fa fa-twitter"></i><?php _e( 'Log in to Twitter and get my Access Token and Secret' ); ?></a>
-
+            <a href="<?php echo OAUTH_PROCESSOR_URL . admin_url( 'admin.php?page=custom-twitter-feeds' ); ?>" id="ctf-get-token"><i class="fa fa-twitter"></i><?php _e( 'Log in to Twitter and get my Access Token and Secret' ); ?></a>
+            <a class="ctf-tooltip-link" href="https://smashballoon.com/custom-twitter-feeds/token/" target="_blank"><?php _e( "Button not working?", 'custom-twitter-feeds' ); ?></a>
+            
         <?php endif; ?>
 
         </div>
@@ -131,7 +135,7 @@ class CtfAdmin
             'section' => 'ctf_configure_connect', // matches the section name
             'option' => 'ctf_configure', // matches the options name
             'class' => 'ctf-toggle-consumer', // class for the wrapper and input field
-            'whatis' => "A Consumer Key and a Consumer Secret are both needed for this plugin to work. You can find these here (insert link)", // what is this? text
+            'whatis' => 'A Consumer Key and a Consumer Secret are both needed if you want to use credentials from your own Twitter App. You can create these <a href="https://smashballoon.com/custom-twitter-feeds/docs/create-twitter-app/" target="_blank">here</a>', // what is this? text
             'size' => '27'
         ) );
 
@@ -144,7 +148,7 @@ class CtfAdmin
             'section' => 'ctf_configure_connect', // matches the section name
             'option' => 'ctf_configure', // matches the options name
             'class' => 'ctf-toggle-consumer', // class for the wrapper and input field
-            'whatis' => "A Consumer Key and a Consumer Secret are both needed for this plugin to work. You can find these here (insert link)", // what is this? text
+            'whatis' => 'A Consumer Key and a Consumer Secret are both needed if you want to use credentials from your own Twitter App. You can create these <a href="https://smashballoon.com/custom-twitter-feeds/docs/create-twitter-app/" target="_blank">here</a>', // what is this? text
             'size' => '57'
         ) );
 
@@ -433,14 +437,14 @@ class CtfAdmin
         // credit ctf
         $this->create_settings_field( array(
             'name' => 'creditctf',
-            'title' => '<label for="ctf_creditctf">Add Custom Twitter Feed Credit</label><code class="ctf_shortcode">creditctf
+            'title' => '<label for="ctf_creditctf">Add Custom Twitter Feeds Credit</label><code class="ctf_shortcode">creditctf
             Eg: creditctf=true</code>', // label for the input field
             'callback'  => 'default_checkbox', // name of the function that outputs the html
             'page' => 'ctf_customize_showandhide', // matches the section name
             'section' => 'ctf_customize_showandhide', // matches the section name
             'option' => 'ctf_customize', // matches the options name
             'class' => '',
-            'whatis' => "Help us keep this plugin great! Add a link below your feed to credit Custom Twitter Feed by Smash Balloon"
+            'whatis' => "Help us keep this plugin great! Add a link below your feed to credit Custom Twitter Feeds by Smash Balloon"
         ));
 
         add_settings_section(
@@ -718,7 +722,7 @@ class CtfAdmin
         // header text color
         $this->create_settings_field( array(
             'name' => 'headertextcolor',
-            'title' => '<label for="ctf_headertextcolor">Tweet Background Color</label><code class="ctf_shortcode">headertextcolor
+            'title' => '<label for="ctf_headertextcolor">Header Text Color</label><code class="ctf_shortcode">headertextcolor
             Eg: headertextcolor=#444</code>', // label for the input field
             'callback'  => 'default_color', // name of the function that outputs the html
             'page' => 'ctf_style_header', // matches the section name
@@ -953,8 +957,8 @@ class CtfAdmin
         <span><?php echo $args['example']; ?></span>
     <?php endif; ?>
         <?php if ( isset( $args['whatis'] ) ) : ?>
-        <a class="ctf-tooltip-link" href="JavaScript:void(0);"><?php _e( "What is this?", 'custom-twitter-feed' ); ?></a>
-        <p class="ctf-tooltip ctf-more-info"><?php _e( $args['whatis'], 'custom-twitter-feed' ); ?>.</p>
+        <a class="ctf-tooltip-link" href="JavaScript:void(0);"><?php _e( "What is this?", 'custom-twitter-feeds' ); ?></a>
+        <p class="ctf-tooltip ctf-more-info"><?php _e( $args['whatis'], 'custom-twitter-feeds' ); ?>.</p>
     <?php endif; ?>
         <?php
     }
@@ -966,12 +970,12 @@ class CtfAdmin
         ?>
         <select name="<?php echo $args['option'].'['.$args['name'].']'; ?>" id="ctf_<?php echo $args['name']; ?>" class="<?php echo $args['class']; ?>">
             <?php foreach ( $args['fields'] as $field ) : ?>
-                <option value="<?php echo $field[0]; ?>" id="ctf-<?php echo $args['name']; ?>" class="<?php echo $args['class']; ?>"<?php if( $selected == $field[0] ) { echo ' selected'; } ?>><?php _e( $field[1], 'custom-twitter-feed' ); ?></option>
+                <option value="<?php echo $field[0]; ?>" id="ctf-<?php echo $args['name']; ?>" class="<?php echo $args['class']; ?>"<?php if( $selected == $field[0] ) { echo ' selected'; } ?>><?php _e( $field[1], 'custom-twitter-feeds' ); ?></option>
             <?php endforeach; ?>
         </select>
         <?php if ( isset( $args['whatis'] ) ) : ?>
-        <a class="ctf-tooltip-link" href="JavaScript:void(0);"><?php _e( "What is this?", 'custom-twitter-feed' ); ?></a>
-        <p class="ctf-tooltip ctf-more-info"><?php _e( $args['whatis'], 'custom-twitter-feed' ); ?>.</p>
+        <a class="ctf-tooltip-link" href="JavaScript:void(0);"><?php _e( "What is this?", 'custom-twitter-feeds' ); ?></a>
+        <p class="ctf-tooltip ctf-more-info"><?php _e( $args['whatis'], 'custom-twitter-feeds' ); ?>.</p>
     <?php endif; ?>
         <?php
     }
@@ -992,8 +996,8 @@ class CtfAdmin
         ?>
         <input name="<?php echo $args['option'].'['.$args['name'].']'; ?>" id="ctf_<?php echo $args['name']; ?>" type="checkbox" <?php if ( $option_checked ) echo "checked"; ?> />
         <?php if ( isset( $args['whatis'] ) ) : ?>
-        <a class="ctf-tooltip-link" href="JavaScript:void(0);"><?php _e( "What is this?", 'custom-twitter-feed' ); ?></a>
-        <p class="ctf-tooltip ctf-more-info"><?php _e( $args['whatis'], 'custom-twitter-feed' ); ?>.</p>
+        <a class="ctf-tooltip-link" href="JavaScript:void(0);"><?php _e( "What is this?", 'custom-twitter-feeds' ); ?></a>
+        <p class="ctf-tooltip ctf-more-info"><?php _e( $args['whatis'], 'custom-twitter-feeds' ); ?>.</p>
     <?php endif; ?>
         <?php
     }
@@ -1005,8 +1009,8 @@ class CtfAdmin
         ?>
         <input name="<?php echo $args['option'].'['.$args['name'].']'; ?>" id="ctf_<?php echo $args['name']; ?>" type="checkbox" <?php if ( $option_checked ) echo "checked"; ?> />
         <?php if ( isset( $args['whatis'] ) ) : ?>
-        <a class="ctf-tooltip-link" href="JavaScript:void(0);"><?php _e( "What is this?", 'custom-twitter-feed' ); ?></a>
-        <p class="ctf-tooltip ctf-more-info"><?php _e( $args['whatis'], 'custom-twitter-feed' ); ?>.</p>
+        <a class="ctf-tooltip-link" href="JavaScript:void(0);"><?php _e( "What is this?", 'custom-twitter-feeds' ); ?></a>
+        <p class="ctf-tooltip ctf-more-info"><?php _e( $args['whatis'], 'custom-twitter-feeds' ); ?>.</p>
     <?php endif; ?>
         <?php
     }
@@ -1029,8 +1033,8 @@ class CtfAdmin
         <?php endif; ?>
 
         <?php if ( isset( $args['whatis'] ) ) : ?>
-        <a class="ctf-tooltip-link" href="JavaScript:void(0);"><?php _e( "What is this?", 'custom-twitter-feed' ); ?></a>
-        <p class="ctf-tooltip ctf-more-info"><?php _e( $args['whatis'], 'custom-twitter-feed' ); ?>.</p>
+        <a class="ctf-tooltip-link" href="JavaScript:void(0);"><?php _e( "What is this?", 'custom-twitter-feeds' ); ?></a>
+        <p class="ctf-tooltip ctf-more-info"><?php _e( $args['whatis'], 'custom-twitter-feeds' ); ?>.</p>
     <?php endif; ?>
 
         <?php
@@ -1044,18 +1048,18 @@ class CtfAdmin
         $option_string = ( isset( $options[ $args['name'].'_text' ] ) ) ? esc_attr( $options[ $args['name'].'_text' ] ) : '';
         ?>
         <input type="radio" name="<?php echo $args['option'].'[type]'; ?>" class="ctf-feed-settings-radio" id="ctf_<?php echo $args['name'].'_radio'; ?>" value="<?php echo $args['name']; ?>" <?php if ( $option_checked ) echo "checked"; ?> />
-        <label class="ctf-radio-label" for="ctf_<?php echo $args['name'].'_radio'; ?>"><?php _e( $args['label'], 'custom-twitter-feed' ); ?></label>
+        <label class="ctf-radio-label" for="ctf_<?php echo $args['name'].'_radio'; ?>"><?php _e( $args['label'], 'custom-twitter-feeds' ); ?></label>
         <?php if ( $args['has_input'] ) : ?>
         <input name="<?php echo $args['option'].'['.$args['name'].'_text'.']'; ?>" id="ctf_<?php echo $args['name'].'_text'; ?>" type="text" value="<?php esc_attr_e( $option_string ); ?>" size="25" />
         <?php endif; ?>
         <?php if ( isset( $args['whatis'] ) ) : ?>
-        <a class="ctf-tooltip-link" href="JavaScript:void(0);"><?php _e( "What is this?", 'custom-twitter-feed' ); ?></a>
-        <p class="ctf-tooltip ctf-more-info"><?php _e( $args['whatis'], 'custom-twitter-feed' ); ?>.</p>
+        <a class="ctf-tooltip-link" href="JavaScript:void(0);"><?php _e( "What is this?", 'custom-twitter-feeds' ); ?></a>
+        <p class="ctf-tooltip ctf-more-info"><?php _e( $args['whatis'], 'custom-twitter-feeds' ); ?>.</p>
         <?php endif; ?>
         <?php if ( $args['has_replies'] ) : ?>
         <span class="ctf_include_replies_toggle ctf_pro">
             <input name="<?php echo $args['option'].'['.$args['name'].'_include_replies]'; ?>" id="ctf_include_replies" type="checkbox" <?php if ( $show_replies ) echo "checked"; ?> />
-            <label class="ctf-radio-label" for="ctf_include_replies"><?php _e( 'include replies', 'custom-twitter-feed' ); ?></label>
+            <label class="ctf-radio-label" for="ctf_include_replies"><?php _e( 'include replies', 'custom-twitter-feeds' ); ?></label>
             <?php do_action( 'ctf_admin_upgrade_note' ); ?>
         </span>
         <?php endif; ?>
@@ -1075,8 +1079,8 @@ class CtfAdmin
         <input name="<?php echo $args['option'].'['.$args['name'].'_text'.']'; ?>" id="ctf_<?php echo $args['name'].'_text'; ?>" type="text" value="<?php esc_attr_e( $option_string ); ?>" size="25" />
     <?php endif; ?>
         <?php if ( isset( $args['whatis'] ) ) : ?>
-        <a class="ctf-tooltip-link" href="JavaScript:void(0);"><?php _e( "What is this?", 'custom-twitter-feed' ); ?></a>
-        <p class="ctf-tooltip ctf-more-info"><?php _e( $args['whatis'], 'custom-twitter-feed' ); ?>.</p>
+        <a class="ctf-tooltip-link" href="JavaScript:void(0);"><?php _e( "What is this?", 'custom-twitter-feeds' ); ?></a>
+        <p class="ctf-tooltip ctf-more-info"><?php _e( $args['whatis'], 'custom-twitter-feeds' ); ?>.</p>
     <?php endif; ?>
         <?php
         do_action( 'ctf_admin_feed_settings_search_extra' );
@@ -1098,9 +1102,9 @@ class CtfAdmin
         <?php if ( $args['name'] == 'width' ) :
         $checked = ( isset( $options[ $args['name'] . '_mobile_no_fixed' ] ) ) ? esc_attr( $options[ $args['name'] . '_mobile_no_fixed' ] ) : false; ?>
         <div id="ctf_width_options">
-            <input name="<?php echo $args['option'].'[width_mobile_no_fixed]'; ?>" type="checkbox" id="ctf_width_mobile_no_fixed" <?php if ( $checked == true ) { echo "checked"; }?> /><label for="ctf_width_mobile_no_fixed"><?php _e('Set to be 100% width on mobile?', 'custom-twitter-feed'); ?></label>
+            <input name="<?php echo $args['option'].'[width_mobile_no_fixed]'; ?>" type="checkbox" id="ctf_width_mobile_no_fixed" <?php if ( $checked == true ) { echo "checked"; }?> /><label for="ctf_width_mobile_no_fixed"><?php _e('Set to be 100% width on mobile?', 'custom-twitter-feeds'); ?></label>
             <a class="ctf-tooltip-link" href="JavaScript:void(0);"><?php _e('What does this mean?', 'custom-facebook-feed'); ?></a>
-            <p class="ctf-tooltip ctf-more-info"><?php _e("If you set a width on the feed then this will be used on mobile as well as desktop. Check this setting to set the feed width to be 100% on mobile so that it is responsive.", 'custom-twitter-feed'); ?></p>
+            <p class="ctf-tooltip ctf-more-info"><?php _e("If you set a width on the feed then this will be used on mobile as well as desktop. Check this setting to set the feed width to be 100% on mobile so that it is responsive.", 'custom-twitter-feeds'); ?></p>
         </div>
         <?php endif; ?>
         <?php
@@ -1120,8 +1124,8 @@ class CtfAdmin
             <option value="86400" <?php if ( $selected == "86400" ) echo 'selected="selected"' ?> ><?php esc_attr_e( 'Days' ); ?></option>
         </select>&nbsp;
         <input id="ctf-clear-cache" class="button-secondary" style="margin-top: 1px;" type="submit" value="<?php esc_attr_e( 'Clear Twitter Cache' ); ?>" />
-        <a class="ctf-tooltip-link" href="JavaScript:void(0);"><?php _e( "What is this?", 'custom-twitter-feed' ); ?></a>
-        <p class="ctf-tooltip ctf-more-info"><?php _e( 'Clicking this button will clear all cached data for your Twitter feeds', 'custom-twitter-feed' ); ?>.</p>
+        <a class="ctf-tooltip-link" href="JavaScript:void(0);"><?php _e( "What is this?", 'custom-twitter-feeds' ); ?></a>
+        <p class="ctf-tooltip ctf-more-info"><?php _e( 'Clicking this button will clear all cached data for your Twitter feeds', 'custom-twitter-feeds' ); ?>.</p>
         <?php
     }
 
@@ -1139,8 +1143,8 @@ class CtfAdmin
             <option value="5" <?php if ( $ctf_date_formatting == "5" ) echo 'selected="selected"'; ?> ><?php echo date( 'm.d.y', $original ); ?></option>
         </select>
         <?php if ( isset( $args['whatis'] ) ) : ?>
-        <a class="ctf-tooltip-link" href="JavaScript:void(0);"><?php _e( "What is this?", 'custom-twitter-feed' ); ?></a>
-        <p class="ctf-tooltip ctf-more-info"><?php _e( $args['whatis'], 'custom-twitter-feed' ); ?>.</p>
+        <a class="ctf-tooltip-link" href="JavaScript:void(0);"><?php _e( "What is this?", 'custom-twitter-feeds' ); ?></a>
+        <p class="ctf-tooltip ctf-more-info"><?php _e( $args['whatis'], 'custom-twitter-feeds' ); ?>.</p>
     <?php endif; ?>
         <?php
     }
@@ -1151,7 +1155,7 @@ class CtfAdmin
         $option_string = ( isset( $options[ $args['name'] ] ) ) ? esc_attr( $options[ $args['name'] ] ) : '';
         ?>
         <input name="<?php echo $args['option'].'['.$args['name'].']'; ?>" id="ctf_<?php echo $args['name']; ?>" type="text" value="<?php esc_attr_e( $option_string ); ?>" size="10" placeholder="Eg. F jS, Y" />
-        <a href="https://smashballoon.com/custom-twitter-feed/docs/date/" class="cff-external-link" target="_blank"><?php _e( 'Examples' , 'custom-twitter-feed'); ?></a>
+        <a href="https://smashballoon.com/custom-twitter-feeds/docs/date/" class="cff-external-link" target="_blank"><?php _e( 'Examples' , 'custom-twitter-feeds'); ?></a>
         <?php
     }
 
@@ -1164,11 +1168,11 @@ class CtfAdmin
 
         ?>
         <input name="<?php echo $args['option'].'[mtime]'; ?>" id="ctf_translate_minute" type="text" value="<?php esc_attr_e( $option_m ); ?>" size="5" />
-        <label for=ctf_translate_minute"><?php _e( 'translation for "m" (minutes)', 'custom-twitter-feed' ); ?></label><br>
+        <label for=ctf_translate_minute"><?php _e( 'translation for "m" (minutes)', 'custom-twitter-feeds' ); ?></label><br>
         <input name="<?php echo $args['option'].'[htime]'; ?>" id="ctf_translate_hour" type="text" value="<?php esc_attr_e( $option_h ); ?>" size="5" />
-        <label for=ctf_translate_hour"><?php _e( 'translation for "h" (hours)', 'custom-twitter-feed' ); ?></label><br>
+        <label for=ctf_translate_hour"><?php _e( 'translation for "h" (hours)', 'custom-twitter-feeds' ); ?></label><br>
         <input name="<?php echo $args['option'].'[nowtime]'; ?>" id="ctf_translate_now" type="text" value="<?php esc_attr_e( $option_now ); ?>" size="5" />
-        <label for=ctf_translate_now"><?php _e( 'translation for "now"', 'custom-twitter-feed' ); ?></label><br>
+        <label for=ctf_translate_now"><?php _e( 'translation for "now"', 'custom-twitter-feeds' ); ?></label><br>
         <?php
     }
 
@@ -1183,7 +1187,7 @@ class CtfAdmin
                 <?php if ( $option_checked ) {
                     echo "checked";
                 } ?> />
-            <label for=ctf_<?php echo $field[0]; ?>"><?php _e( $field[1], 'custom-twitter-feed' ); ?></label><br>
+            <label for=ctf_<?php echo $field[0]; ?>"><?php _e( $field[1], 'custom-twitter-feeds' ); ?></label><br>
             <?php
         } // end foreach
     }
@@ -1213,8 +1217,8 @@ class CtfAdmin
             <option value="60" <?php if ( $ctf_text_size == "60" ) echo 'selected="selected"' ?> >60px</option>
         </select>
         <?php if ( isset( $args['whatis'] ) ) : ?>
-        <a class="ctf-tooltip-link" href="JavaScript:void(0);"><?php _e( "What is this?", 'custom-twitter-feed' ); ?></a>
-        <p class="ctf-tooltip ctf-more-info"><?php _e( $args['whatis'], 'custom-twitter-feed' ); ?>.</p>
+        <a class="ctf-tooltip-link" href="JavaScript:void(0);"><?php _e( "What is this?", 'custom-twitter-feeds' ); ?></a>
+        <p class="ctf-tooltip ctf-more-info"><?php _e( $args['whatis'], 'custom-twitter-feeds' ); ?>.</p>
     <?php endif; ?>
         <?php
     }
@@ -1230,8 +1234,8 @@ class CtfAdmin
             <option value="bold" <?php if ( $ctf_text_weight == "bold" ) echo 'selected="selected"'; ?> >Bold</option>
         </select>
         <?php if ( isset( $args['whatis'] ) ) : ?>
-        <a class="ctf-tooltip-link" href="JavaScript:void(0);"><?php _e( "What is this?", 'custom-twitter-feed' ); ?></a>
-        <p class="ctf-tooltip ctf-more-info"><?php _e( $args['whatis'], 'custom-twitter-feed' ); ?>.</p>
+        <a class="ctf-tooltip-link" href="JavaScript:void(0);"><?php _e( "What is this?", 'custom-twitter-feeds' ); ?></a>
+        <p class="ctf-tooltip ctf-more-info"><?php _e( $args['whatis'], 'custom-twitter-feeds' ); ?>.</p>
     <?php endif; ?>
         <?php
     }
@@ -1335,8 +1339,8 @@ class CtfAdmin
             <option value="Pacific/Kiritimati" <?php if( $ctf_timezone == "Pacific/Kiritimati" ) echo 'selected="selected"' ?> ><?php _e( '(GMT+14:00) Kiritimati' ) ?></option>
         </select>
         <?php if ( isset( $args['whatis'] ) ) : ?>
-        <a class="ctf-tooltip-link" href="JavaScript:void(0);"><?php _e( "What is this?", 'custom-twitter-feed' ); ?></a>
-        <p class="ctf-tooltip ctf-more-info"><?php _e( $args['whatis'], 'custom-twitter-feed' ); ?>.</p>
+        <a class="ctf-tooltip-link" href="JavaScript:void(0);"><?php _e( "What is this?", 'custom-twitter-feeds' ); ?></a>
+        <p class="ctf-tooltip ctf-more-info"><?php _e( $args['whatis'], 'custom-twitter-feeds' ); ?>.</p>
     <?php endif; ?>
         <?php
     }
@@ -1346,9 +1350,9 @@ class CtfAdmin
         $options = get_option( $args['option'] );
         $option_string = ( isset( $options[ $args['name'] ] ) ) ? esc_attr( $options[ $args['name'] ] ) : '';
         ?>
-        <p><?php _e( $args['description'], 'custom-twitter-feed' ) ; ?></p>
+        <p><?php _e( $args['description'], 'custom-twitter-feeds' ) ; ?></p>
         <textarea name="<?php echo $args['option'].'['.$args['name'].']'; ?>" id="ctf_<?php echo $args['name']; ?>" style="width: 70%;" rows="7"><?php esc_attr_e( stripslashes( $option_string ) ); ?></textarea>
-        <?php if ( isset( $args['extra'] ) ) { _e( '<p class="ctf_note">'.$args['extra'].'</p>', 'custom-twitter-feed' ); } ?>
+        <?php if ( isset( $args['extra'] ) ) { _e( '<p class="ctf_note">'.$args['extra'].'</p>', 'custom-twitter-feeds' ); } ?>
         <?php
     }
 

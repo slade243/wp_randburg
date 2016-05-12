@@ -31,4 +31,4 @@ settings_errors(); ?>
     <?php do_settings_sections('ctf_customize_advanced'); // matches the section name ?>
     <p class="submit"><input class="button-primary" type="submit" name="save" value="<?php esc_attr_e( 'Save Changes' ); ?>" /></p>
 </form>
-<p><i class="fa fa-chevron-circle-right" aria-hidden="true"></i>&nbsp; <?php _e('<b>Next Step:</b> <a href="?page=custom-twitter-feed&tab=style">Style your Feed</a>'); ?></p>
+<p><i class="fa fa-chevron-circle-right" aria-hidden="true"></i>&nbsp; <?php _e('<b>Next Step:</b> <a href="?page=custom-twitter-feeds&tab=style">Style your Feed</a>'); ?></p>

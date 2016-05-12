@@ -133,6 +133,11 @@
     clear: both;
     margin: 10px 0 10px 0;
 }
+#ctf_config .ctf-tooltip-link{
+    position: relative;
+    top: 13px;
+    left: 6px;
+}
 #ctf_config_info{
     float: left;
     clear: both;
@@ -310,7 +315,7 @@
 #ctf-admin .ctf-success{
     font-size: 14px;
 }
-#toplevel_page_custom-twitter-feed .dashicons-admin-generic:before {
+#toplevel_page_custom-twitter-feeds .dashicons-admin-generic:before {
     content: "\f301";
 }
 

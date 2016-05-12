@@ -1,12 +1,12 @@
 <?php
 /*
-Plugin Name: Custom Twitter Feed
-Plugin URI: http://smashballoon.com/custom-twitter-feed
-Description: A customizable Twitter feed for your website
-Version: 1.0
+Plugin Name: Custom Twitter Feeds
+Plugin URI: http://smashballoon.com/custom-twitter-feeds
+Description: Customizable Twitter feeds for your website
+Version: 1.0.1
 Author: Smash Balloon
 Author URI: http://smashballoon.com/
-Text Domain: custom-twitter-feed
+Text Domain: custom-twitter-feeds
 */
 /*
 Copyright 2016  Smash Balloon LLC (email : hey@smashballoon.com)
@@ -24,9 +24,9 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
 define( 'CTF_URL', plugin_dir_path( __FILE__ )  );
-define( 'CTFVER', '1.0' );
-define( 'CTF_TITLE', 'Custom Twitter Feed' ); 
-define( 'CTF_JS_URL', plugins_url( '/js/ctf-scripts.js?ver=' . CTFVER , __FILE__ ) );
+define( 'CTF_VERSION', '1.0.1' );
+define( 'CTF_TITLE', 'Custom Twitter Feeds' );
+define( 'CTF_JS_URL', plugins_url( '/js/ctf-scripts.js?ver=' . CTF_VERSION , __FILE__ ) );
 define( 'OAUTH_PROCESSOR_URL', 'https://smashballoon.com/ctf-at-retriever/?return_uri=' );
 
 require_once( CTF_URL . '/inc/widget.php' );
@@ -64,6 +64,7 @@ function ctf_init( $atts ) {
     }
 }
 add_shortcode( 'custom-twitter-feed', 'ctf_init' );
+add_shortcode( 'custom-twitter-feeds', 'ctf_init' );
 
 /**
  * Called via ajax to get more posts after the "load more" button is clicked
@@ -242,9 +243,9 @@ register_deactivation_hook( __FILE__, 'ctf_deactivate' );
  * Loads the javascript for the plugin front-end. Also localizes the admin-ajax file location for use in ajax calls
  */
 function ctf_scripts_and_styles() {
-    wp_enqueue_style( 'ctf_styles', plugins_url( '/css/ctf-styles.css?ver=' . CTFVER, __FILE__ ) );
+    wp_enqueue_style( 'ctf_styles', plugins_url( '/css/ctf-styles.css', __FILE__ ), array(), CTF_VERSION );
     wp_enqueue_script( 'ctf_twitter_intents', 'https://platform.twitter.com/widgets.js' );
-    wp_enqueue_script( 'ctf_scripts', plugins_url( '/js/ctf-scripts.js?ver=' . CTFVER, __FILE__ ), array( 'jquery' ), '', true );
+    wp_enqueue_script( 'ctf_scripts', plugins_url( '/js/ctf-scripts.js', __FILE__ ), array( 'jquery' ), CTF_VERSION, true );
     wp_localize_script( 'ctf_scripts', 'ctf', array(
             'ajax_url' => admin_url( 'admin-ajax.php' )
         )
@@ -261,7 +262,7 @@ function ctf_custom_js() {
 
     if ( ! empty( $ctf_custom_js ) ) {
         ?>
-        <!-- Custom Twitter Feed JS -->
+        <!-- Custom Twitter Feeds JS -->
         <script type="text/javascript">
             jQuery(document).ready(function($) {
                 <?php echo stripslashes( $ctf_custom_js ) . "\r\n"; ?>
@@ -281,7 +282,7 @@ function ctf_custom_css() {
 
     if ( ! empty( $ctf_custom_css ) ) {
         ?>
-        <!-- Custom Twitter Feed CSS -->
+        <!-- Custom Twitter Feeds CSS -->
         <style type="text/css">
             <?php echo stripslashes( $ctf_custom_css ) . "\r\n"; ?>
         </style>
@@ -294,8 +295,8 @@ add_action( 'wp_head', 'ctf_custom_css' );
  * Some CSS and JS needed in the admin area as well
  */
 function ctf_admin_scripts_and_styles() {
-    wp_enqueue_style( 'ctf_admin_styles', plugins_url( '/css/ctf-admin-styles.css?ver=' . CTFVER, __FILE__ ) );
-    wp_enqueue_script( 'ctf_admin_scripts', plugins_url( '/js/ctf-admin-scripts.js?ver=' . CTFVER, __FILE__ ) , array( 'jquery' ), '', false );
+    wp_enqueue_style( 'ctf_admin_styles', plugins_url( '/css/ctf-admin-styles.css', __FILE__ ), array(), CTF_VERSION );
+    wp_enqueue_script( 'ctf_admin_scripts', plugins_url( '/js/ctf-admin-scripts.js', __FILE__ ) , array( 'jquery' ), CTF_VERSION, false );
     wp_localize_script( 'ctf_admin_scripts', 'ctf', array(
             'ajax_url' => admin_url( 'admin-ajax.php' ),
             'sb_nonce' => wp_create_nonce( 'ctf-smash-balloon' )

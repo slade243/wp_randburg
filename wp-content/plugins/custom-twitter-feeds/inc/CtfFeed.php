@@ -773,7 +773,7 @@ class CtfFeed
         $html = '';
 
         $html .= '<div class="ctf-out-of-tweets">';
-            $html .= '<p>'. _e( "That's all! No more Tweets to load", 'custom-twitter-feed' ).'</p>';
+            $html .= '<p>That\'s all! No more Tweets to load</p>';
             $html .= '<p>';
                 $html .= '<a class="twitter-share-button" href="https://twitter.com/share" target="_blank" data-size="large" data-url="<?php echo get_home_url(); ?>">Share</a>';
             if ( isset( $feed_options['screenname'] ) ) {
@@ -798,7 +798,7 @@ class CtfFeed
         $ctf_feed_classes = apply_filters( 'ctf_feed_classes', $ctf_feed_classes ); //add_filter( 'ctf_feed_classes', function( $ctf_feed_classes ) { return $ctf_feed_classes . ' new-class'; }, 10, 1 );
         $ctf_feed_html = '';
 
-        $ctf_feed_html .= '<!-- Custom Twitter Feed by Smash Balloon -->';
+        $ctf_feed_html .= '<!-- Custom Twitter Feeds by Smash Balloon -->';
         $ctf_feed_html .= '<div id="ctf" class="' . $ctf_feed_classes . '" style="' . $feed_options['width'] . $feed_options['height'] . $feed_options['bgcolor'] . '" data-ctfshortcode="' . $this->getShortCodeJSON() . '"' .$ctf_data_disablelinks . $ctf_data_linktextcolor . '>';
         $tweet_set = $this->tweet_set;
         
@@ -816,7 +816,7 @@ class CtfFeed
             }
 
             if ( $feed_options['creditctf'] ) {
-                $ctf_feed_html .= '<div class="ctf-credit-link"><a href="https://smashballoon.com/custom-twitter-feed" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>The Custom Twitter Feed Plugin</a></div>';
+                $ctf_feed_html .= '<div class="ctf-credit-link"><a href="https://smashballoon.com/custom-twitter-feeds" target="_blank"><iclass="fa fa-twitter" aria-hidden="true"></i>Custom Twitter Feeds Plugin</a></div>';
             }
 
             $ctf_feed_html .= '</div>';
@@ -831,12 +831,13 @@ class CtfFeed
     protected function getFeedHeaderHtml( $tweet_set, $feed_options )
     {
         $ctf_header_html = '';
+        $ctf_no_bio = $feed_options['showbio'] ? '' : ' ctf-no-bio';
 
         if ( $feed_options['type'] === 'usertimeline' ) {
-            $ctf_header_html .= '<div class="ctf-header">';
+            $ctf_header_html .= '<div class="ctf-header' . $ctf_no_bio . '" style="' . $feed_options['headerbgcolor'] . '">';
                 $ctf_header_html .= '<a href="http://twitter.com/' . $tweet_set[0]['user']['screen_name'] . '" target="_blank" title="@' . $tweet_set[0]['user']['screen_name'] . '" class="ctf-header-link">';
                     $ctf_header_html .= '<div class="ctf-header-text">';
-                        $ctf_header_html .= '<p class="ctf-header-user">';
+                        $ctf_header_html .= '<p class="ctf-header-user" style="' . $feed_options['headertextcolor'] . '">';
                             $ctf_header_html .= '<span class="ctf-header-name">';
 
                         if ( $feed_options['headertext'] != '' ) {
@@ -855,7 +856,7 @@ class CtfFeed
                         $ctf_header_html .= '</p>';
 
                     if ( $feed_options['showbio'] ) {
-                        $ctf_header_html .= '<p class="ctf-header-bio">' . $tweet_set[0]['user']['description'] . '</p>';
+                        $ctf_header_html .= '<p class="ctf-header-bio" style="' . $feed_options['headertextcolor'] . '">' . $tweet_set[0]['user']['description'] . '</p>';
                     }
 
                     $ctf_header_html .= '</div>';
@@ -875,10 +876,10 @@ class CtfFeed
                 $url_part = $feed_options['screenname']; //Need to get screenname here
             }
 
-            $ctf_header_html .= '<div class="ctf-header ctf-header-type-generic">';
+            $ctf_header_html .= '<div class="ctf-header ctf-header-type-generic" style="' . $feed_options['headerbgcolor'] . '">';
                 $ctf_header_html .= '<a href="https://twitter.com/' . $url_part . '" target="_blank" class="ctf-header-link">';
                     $ctf_header_html .= '<div class="ctf-header-text">';
-                        $ctf_header_html .= '<p class="ctf-header-no-bio">' . $default_header_text . '</p>';
+                        $ctf_header_html .= '<p class="ctf-header-no-bio" style="' . $feed_options['headertextcolor'] . '">' . $default_header_text . '</p>';
                     $ctf_header_html .= '</div>';
                     $ctf_header_html .= '<div class="ctf-header-img">';
                         $ctf_header_html .= '<div class="ctf-header-generic-icon">';
@@ -1067,7 +1068,7 @@ class CtfFeed
                     $error_html .= 'The error response from the Twitter API is the following:<br />';
                     $error_html .= '<code>Error number: ' . $this->api_obj->api_error_no . '<br />';
                     $error_html .= 'Message: ' . $this->api_obj->api_error_message . '</code>';
-                    $error_html .= '<a href="https://smashballoon.com/custom-twitter-feed/support" target="_blank">Click here to troubleshoot</a></p>';
+                    $error_html .= '<a href="https://smashballoon.com/custom-twitter-feeds/support" target="_blank">Click here to troubleshoot</a></p>';
                 }
 
                 $error_html .= '</div>';

@@ -90,6 +90,9 @@
     width: 100%;
     padding-top: 5px;
 }
+#ctf .ctf-no-bio .ctf-header-text{
+    padding-top: 13px;
+}
 #ctf .ctf-header a{
     text-decoration: none;
 }
@@ -258,6 +261,9 @@
     color: #77c7f7;
     margin-left: 0;
 }
+#ctf .ctf-quoted-verified {
+    margin-right: 4px;
+}
 #ctf .ctf-tweet-meta{
     display: inline-block;
 }
@@ -296,7 +302,7 @@
 /*Quoted tweets*/
 #ctf .ctf-quoted-tweet{
     display: block;
-    float: left;
+    /*float: left;*/
     clear: both;
     margin: 7px 0 5px 58px;
     padding: 8px 12px;
@@ -487,7 +493,7 @@
 #ctf .ctf-error iframe,
 #ctf .ctf-error code{
     padding: 0;
-    margin: 0;
+    margin: 0 2px;
 }
 #ctf .ctf-error-user p{
     padding-bottom: 5px;
@@ -527,7 +533,7 @@
 }
 #ctf .ctf-out-of-tweets p,
 #ctf .ctf-out-of-tweets iframe{
-    margin: 0;
+    margin: 0 2px;
     padding: 0;
 }
 #ctf .ctf-out-of-tweets p{
