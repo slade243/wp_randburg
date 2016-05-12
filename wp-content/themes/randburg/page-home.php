@@ -4,8 +4,8 @@
 */
 
 get_header();
-
-$pages = get_pages(array('exclude' => get_the_ID()));
+/* $pages = get_pages(array('exclude' => get_the_ID())); */
+$pages = get_pages(array('child_of' => '61'));
 ?>
 <div class="slideshow">
 	<?php do_action('slideshow_deploy', '27'); ?>
