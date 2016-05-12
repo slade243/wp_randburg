@@ -15,15 +15,18 @@ $pages = get_pages(array('exclude' => get_the_ID()));
 		<ul>
 			<?php foreach ( $pages as $page ) : ?>
 				<li class="item">
-					<div class="header" style="background-image: url(<?php echo wp_get_attachment_url(get_post_thumbnail_id($page->ID)); ?>)">
-					<div class="accent"></div>
-	</div>
-			<span><?php echo apply_filters( 'the_title', $page->post_title, $page->ID ); ?></span>
+					<a href="<?php echo get_page_link($page->ID); ?>">
+						<div class="header" style="background-image: url(<?php echo wp_get_attachment_url(get_post_thumbnail_id($page->ID)); ?>)">
+							<div class="accent"></div>
+						</div>
+						<span><?php echo apply_filters( 'the_title', $page->post_title, $page->ID ); ?></span>
+					</a>
 				</li>
-    <?php endforeach; ?>
-  </ul>
+			<?php endforeach; ?>
+		</ul>
 </div> 
 </div>
 <div class="twitter_static">
 </div>
+<?php get_template_part(page, twitterfeed); ?>
 <?php get_footer(); ?>

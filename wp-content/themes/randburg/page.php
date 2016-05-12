@@ -1,5 +1,4 @@
 <?php
-<<<<<<< HEAD
   get_header();
 ?>
 <div id="primary" class="content-area">
@@ -17,6 +16,7 @@
 </div><!-- .content-area -->
 
 <?php
-  get_footer();
+	get_template_part(page, twitterfeed);
+	get_footer();
  ?>
 

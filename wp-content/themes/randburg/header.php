@@ -11,5 +11,5 @@
     <div id="wrapper">
       <div id="header">
         <img src="wp-includes/images/randburg-logo.png" alt="Custom image" class="customImage" />
-        <?php wp_nav_menu(array('menu' => 'Main Menu')); ?>
+			<?php wp_nav_menu(array('menu' => 'top_navigation'));  ?>
       </div>
