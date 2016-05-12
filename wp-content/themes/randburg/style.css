@@ -22,6 +22,9 @@ html, body {
 	background-color: #fff;
 }
 
+h1 {
+	
+}
 
 /* Categories Grid */
 #categories-grid {
@@ -52,7 +55,7 @@ html, body {
 
 
 #categories-grid .item .accent {
-	background-color: #ff4d4d;
+	background-color: #ff0000;
 	position: absolute;
 	width: 50%;
 	height: 5px;
@@ -67,7 +70,7 @@ html, body {
 #categories-grid .item a {
 	font-size: 20px;
     font-weight: 700;
-	color: #ff4d4d;
+	color: #ff0000;
 	text-decoration: none;
 }
 
@@ -149,27 +152,55 @@ html, body {
 /* Footer */
 
 #footer {
-	height: 200px;
+	height: 10vw;
 	border-top: 1px solid #b1b1b1;
 	border-bottom: 2vw solid #333;
 	background-color: #e8e8e8;
 }
 
 #footer .QMS {
-	width: 75px;
-	height: 75px;
+	width: 4vw;
+	height: 4vw;
 }
 
 #footer #logoBox {
-	float: right;
-	margin-right: 70px; 
-	margin-top: 30px;
+	margin-left: 32vw;
+	margin-top: 2vw;
 }
 
 /* bottomBody */
 .bottomBody {
-	height: 10vw;
+	min-height: 20vw;
 	border-top: 1px solid #b1b1b1;
+}
+
+.bottomBody h1 {
+	margin-top: 2vw;
+	margin-bottom: 1vw;
+	border-bottom: 1px solid #b1b1b1;
+	padding-bottom: 2px;
+
+}
+
+.bottomBody h1 span {
+	width: 8vw;	
+	color: #000;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.2;
+	border-bottom: 3px solid #ff0000;
+	
+}
+
+.twitterfeed {
+	margin-left: 19vw;
+	margin-bottom: 2vw;
+	width: 28%;
+	font-size: 13px;
+}
+
+.twitterfeed .ctf-item {
+	margin-bottom: 1vw;
 }
 
 .content {
@@ -181,7 +212,4 @@ html, body {
 	background-color: yellow;
 }
 
-.twitter_static {
-	height: 150px;
-	background-color: grey;
-}
+

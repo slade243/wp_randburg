@@ -27,5 +27,5 @@ $pages = get_pages(array('child_of' => '61'));
 		</ul>
 </div> 
 </div>
-<?php get_template_part(page, twitterfeed); ?>
+<?php get_template_part(page, bottomBody); ?>
 <?php get_footer(); ?>

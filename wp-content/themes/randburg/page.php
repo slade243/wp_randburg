@@ -16,7 +16,7 @@
 </div><!-- .content-area -->
 
 <?php
-	get_template_part(page, twitterfeed);
+	get_template_part(page, bottomBody);
 	get_footer();
  ?>
 
