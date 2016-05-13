@@ -1,17 +1,15 @@
 <?php
 /**
-* Template Name: Homepage
+* Template Name: Projects
 */
-
-get_header();
-/* $pages = get_pages(array('exclude' => get_the_ID())); */
-$pages = get_pages(array('child_of' => '61'));
+  get_header();
+  $pages = get_pages(array('child_of' => get_the_ID()));
 ?>
-<div class="slideshow">
-	<?php do_action('slideshow_deploy', '27'); ?>
+<div class="topBanner">
+
 </div>
 <div class="content">
-	<h3><?php echo "Services"; ?></h3>
+	<h3><?php echo "Projects"; ?></h3>
 	<div id="categories-grid">
 		<ul>
 			<?php foreach ( $pages as $page ) : ?>
@@ -27,5 +25,9 @@ $pages = get_pages(array('child_of' => '61'));
 		</ul>
 	</div> 
 </div>
-<?php get_template_part(page, bottomBody); ?>
-<?php get_footer(); ?>
+
+<?php
+	get_template_part(page, bottomBody);
+	get_footer();
+ ?>
+

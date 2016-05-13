@@ -9,7 +9,10 @@
 	<body>
 		<div id="wrapper">
 			<div id="topBar">
-				
+				<div class=topIcons>
+					<div id="phoneIcon"><span>010203</span></div>
+					<div id="atIcon"><span>test@test.de</span></div>
+				</div>
 			</div>
 			<div id="header">
 				<img src="http://192.168.20.153/wp_randburg/wp-includes/images/randburg-logo.png" alt="Custom image" class="customImage" />

@@ -1,7 +1,7 @@
 /*
 Theme Name: Randburg
 Theme URI: http://google.de
-Author: Dominik Winter, Ingo Hotischek, Tobias Schnellenbach
+Author: Dominik Winter, Ingo Hotischeck, Tobias Schnellenbach
 Author URI: http://google.de
 Description:
 Version: 1.0
@@ -16,6 +16,7 @@ Text Domain: randburg
 	margin: 0;
 	box-sizing: border-box;
 }
+
 html, body {
 	font-family: Raleway, arial;
 	width: 100vw;
@@ -24,6 +25,10 @@ html, body {
 
 h1 {
 	
+}
+
+h3 {
+	font-size: 1vw;
 }
 
 /* Categories Grid */
@@ -58,13 +63,13 @@ h1 {
 	background-color: #ff0000;
 	position: absolute;
 	width: 50%;
-	height: 5px;
+	height: 0.3vw;
 	bottom: 0;
 	left: 10%;
 }
 
 #categories-grid .item span {
-	margin-left: 1vw;
+	margin-left: 1.9vw;
 }
 
 #categories-grid .item a {
@@ -72,6 +77,9 @@ h1 {
     font-weight: 700;
 	color: #ff0000;
 	text-decoration: none;
+}
+
+.page-content #categories-grid {
 }
 
 /* categories-grid MEDIA */
@@ -98,18 +106,23 @@ h1 {
 }
 
 /* Header */
+#header {
+	margin-bottom: 5vw;
+}
+
 #header .menu {
-	margin-right: 50px;
-	margin-bottom: 50px;
+	margin-right: 4vw;
+	margin-bottom: 5vw;
+	margin-top: 4vw;
 	position: absolute;
-    top: 100px;
-    right: 16px;
+    top: 5vw;
+    right: 2vw;
     font-size: 18px;
 }
 
 #header img {
-	margin-top: 50px;
-	margin-left: 50px;
+	margin-top: 5vw;
+	margin-left: 3vw;
 	height: 75px;
 	width: 250px;
 }
@@ -144,13 +157,55 @@ h1 {
     border-bottom: 3px solid #ff0000;
 }
 
+/* topBar */
 #topBar { 
-	height: 2vw;
+	height: 3vw;
 	background-color: #e8e8e8;
 }
 
-/* Footer */
+#topBar .topIcons {
+	width: 25vw;
+	height: 3vw;
+	float: right;
+	margin-right: 5vw;
+	display: flex;
+}
 
+#topBar .topIcons #phoneIcon {
+	background-image: url("http://192.168.20.153/wp_randburg/wp-includes/images/icons/phone_red_white.png");
+	background-repeat: no-repeat;
+	margin-top: 0.4vw;
+	margin-right: 10vw;
+}
+
+#topBar .topIcons #phoneIcon:hover {
+	background-image: url("http://192.168.20.153/wp_randburg/wp-includes/images/icons/phone_white_red.png");
+	background-repeat: no-repeat;
+}
+
+#topBar .topIcons #atIcon {
+	background-image: url("http://192.168.20.153/wp_randburg/wp-includes/images/icons/phone_red_white.png");
+	background-repeat: no-repeat;
+	margin-top: 0.4vw;
+	margin-right: 10vw;
+}
+
+#topBar .topIcons #atIcon:hover {
+	background-image: url("http://192.168.20.153/wp_randburg/wp-includes/images/icons/phone_white_red.png");
+	background-repeat: no-repeat;
+	margin-right: 10vw;
+}
+
+#topBar .topIcons #atIcon span {
+	height: 34px;
+	margin-left: 3vw;
+}
+
+#topBar .topIcons #phoneIcon span {
+	margin-left: 3vw;
+}
+	
+/* Footer */
 #footer {
 	height: 10vw;
 	border-top: 1px solid #b1b1b1;
@@ -165,7 +220,7 @@ h1 {
 
 #footer #logoBox {
 	margin-left: 32vw;
-	margin-top: 2vw;
+	margin-top: 2vw; 
 }
 
 /* bottomBody */
@@ -179,7 +234,6 @@ h1 {
 	margin-bottom: 1vw;
 	border-bottom: 1px solid #b1b1b1;
 	padding-bottom: 2px;
-
 }
 
 .bottomBody h1 span {
@@ -192,9 +246,23 @@ h1 {
 	
 }
 
+.bottomBody .bottomBodyContent {
+	margin: 0 auto;
+	padding-bottom: 5.4vw;
+	width: 80%;
+	
+}
+
+.bottomBody .whyus {
+	float: right;
+	width: 38%;
+	margin-right: 8.5vw;
+}
+
+/* Twitterfeed */
 .twitterfeed {
-	margin-left: 19vw;
-	margin-bottom: 2vw;
+	margin-left: 8.5vw;
+	float: left;
 	width: 28%;
 	font-size: 13px;
 }
@@ -203,13 +271,29 @@ h1 {
 	margin-bottom: 1vw;
 }
 
-.content {
-	
+.twitterfeed .ctf-author-box-link a {
+	color: #ff0000;
+	text-decoration: none;
 }
 
-.content .services {
-	height: 100px;
-	background-color: yellow;
+.twitterfeed .ctf-tweet-meta a {
+	color: #b1b1b1;
+	font-size: 12px;
 }
 
+.twitterfeed .ctf-tweet-text {
+	font-size: 16px;
+}
 
+/* topBanner */
+.topBanner {
+	height: 15vw;
+	background-color: green;
+}
+
+/* contact-form */
+.wdform_page {
+	float: left;
+	margin-top: 5vw;
+	margin-left: 18vw;
+}
