@@ -24,7 +24,7 @@ html, body {
 }
 
 h1 {
-	
+
 }
 
 h3 {
@@ -84,7 +84,7 @@ h3 {
 
 /* categories-grid MEDIA */
 @media (max-width: 480px) {
-	
+
 	#categories-grid .item a {
 		display: block;
 	}
@@ -102,7 +102,7 @@ h3 {
 /* Content */
 .content h3 {
 	text-align: center;
-	
+
 }
 
 /* Header */
@@ -158,7 +158,7 @@ h3 {
 }
 
 /* topBar */
-#topBar { 
+#topBar {
 	height: 3vw;
 	background-color: #e8e8e8;
 }
@@ -172,26 +172,26 @@ h3 {
 }
 
 #topBar .topIcons #phoneIcon {
-	background-image: url("http://192.168.20.153/wp_randburg/wp-includes/images/icons/phone_red_white.png");
+	background-image: url("images/icons/phone_red_white.png");
 	background-repeat: no-repeat;
 	margin-top: 0.4vw;
 	margin-right: 10vw;
 }
 
 #topBar .topIcons #phoneIcon:hover {
-	background-image: url("http://192.168.20.153/wp_randburg/wp-includes/images/icons/phone_white_red.png");
+	background-image: url("images/icons/phone_white_red.png");
 	background-repeat: no-repeat;
 }
 
 #topBar .topIcons #atIcon {
-	background-image: url("http://192.168.20.153/wp_randburg/wp-includes/images/icons/phone_red_white.png");
+	background-image: url("images/icons/phone_red_white.png");
 	background-repeat: no-repeat;
 	margin-top: 0.4vw;
 	margin-right: 10vw;
 }
 
 #topBar .topIcons #atIcon:hover {
-	background-image: url("http://192.168.20.153/wp_randburg/wp-includes/images/icons/phone_white_red.png");
+	background-image: url("images/icons/phone_white_red.png");
 	background-repeat: no-repeat;
 	margin-right: 10vw;
 }
@@ -204,7 +204,7 @@ h3 {
 #topBar .topIcons #phoneIcon span {
 	margin-left: 3vw;
 }
-	
+
 /* Footer */
 #footer {
 	height: 10vw;
@@ -220,7 +220,7 @@ h3 {
 
 #footer #logoBox {
 	margin-left: 32vw;
-	margin-top: 2vw; 
+	margin-top: 2vw;
 }
 
 /* bottomBody */
@@ -237,20 +237,20 @@ h3 {
 }
 
 .bottomBody h1 span {
-	width: 8vw;	
+	width: 8vw;
 	color: #000;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.2;
 	border-bottom: 3px solid #ff0000;
-	
+
 }
 
 .bottomBody .bottomBodyContent {
 	margin: 0 auto;
 	padding-bottom: 5.4vw;
 	width: 80%;
-	
+
 }
 
 .bottomBody .whyus {
