@@ -297,3 +297,56 @@ h3 {
 	margin-top: 5vw;
 	margin-left: 18vw;
 }
+
+/* Slider */
+#slider {
+	overflow-y: visible;
+	position: relative;
+	overflow-x: hidden;
+}
+#slider ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 423px;
+  list-style: none;
+	left: 0;
+}
+
+#slider .slide {
+	position: relative;
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100vw;
+	text-align: center;
+
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url('http://placehold.it/1920x1080');
+}
+
+#slider .pagination {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	padding: 15px 0;
+}
+#slider .pagination .pagination-item {
+	position: relative;
+	display: block;
+	float: left;
+	margin: 0 10px;
+	height: 2px;
+	background-color: grey;
+	transition: all .3s;
+}
+
+#slider .pagination .pagination-item:hover,
+#slider .pagination .pagination-item.active {
+	height: 5px;
+	background-color: red;
+}
