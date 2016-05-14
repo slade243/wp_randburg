@@ -25,8 +25,10 @@ $pages = get_pages(array('child_of' => '61'));
 				</li>
 			<?php endforeach; ?>
 		</ul>
-	</div> 
+	</div>
 </div>
+
+<?php get_template_part('page', 'bottom-body'); ?>
 
 <div id="categories-grid">
   <ul>
