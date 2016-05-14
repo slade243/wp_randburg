@@ -1,9 +1,7 @@
 <?php
-  get_header();
+	get_header();
+	get_template_part('banner', 'featured');
 ?>
-<div class="topBanner">
-
-</div> 
 <div id="primary" class="content-area">
   <main id="main" class="site-main" role="main">
 

@@ -4,9 +4,8 @@
 */
 
   get_header();
+  get_template_part('banner', 'featured');
 ?>
-<div class="topBanner">
-</div>
 <div class="content">
 	<h3>Projects</h3>
 	<?php get_template_part('category', 'grid'); ?>
