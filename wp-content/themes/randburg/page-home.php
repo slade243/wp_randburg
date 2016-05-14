@@ -7,9 +7,7 @@ get_header();
 /* $pages = get_pages(array('exclude' => get_the_ID())); */
 $pages = get_pages(array('child_of' => '61'));
 ?>
-<div class="slideshow">
-	<?php do_action('slideshow_deploy', '27'); ?>
-</div>
+<?php get_template_part('slider'); ?>
 <div class="content">
 	<h3><?php echo "Services"; ?></h3>
 	<div id="categories-grid">
