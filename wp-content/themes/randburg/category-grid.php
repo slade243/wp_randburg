@@ -1,4 +1,10 @@
-<?php $pages = get_pages(array('child_of' => get_the_ID())); ?>
+<?php 
+	if (is_page('Home')) {
+		$pages = get_pages(array('child_of' => get_page_by_title('Services')->ID ));
+	} else {
+		$pages = get_pages(array('child_of' => get_the_ID())); 
+	}
+ ?>
 
 <div id="categories-grid">
 	<ul>

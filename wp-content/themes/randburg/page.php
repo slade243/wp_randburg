@@ -3,7 +3,7 @@
 ?>
 <div class="topBanner">
 
-</div>
+</div> 
 <div id="primary" class="content-area">
   <main id="main" class="site-main" role="main">
 
@@ -20,6 +20,6 @@
 </div><!-- .content-area -->
 
 <?php
-	get_template_part('page', 'bottom-body');
+	get_template_part('static', 'twitter');
 	get_footer();
  ?>
