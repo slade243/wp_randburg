@@ -2,7 +2,7 @@
 	get_header();
 	get_template_part('banner', 'featured');
 ?>
-<div id="primary" class="content-area">
+<div id="primary" class="content">
   <main id="main" class="site-main" role="main">
 
 	<?php
