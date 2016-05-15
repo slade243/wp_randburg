@@ -333,7 +333,25 @@ h3 {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-image: url('http://placehold.it/1920x1080');
+}
+
+#slider .slide:nth-child(1) {
+	background-image: url('images/slideshow/slide-1.jpg');
+}
+#slider .slide:nth-child(2) {
+	background-image: url('images/slideshow/slide-2.jpg');
+}
+#slider .slide:nth-child(3) {
+	background-image: url('images/slideshow/slide-3.jpg');
+}
+#slider .slide:nth-child(4) {
+	background-image: url('images/slideshow/slide-4.jpg');
+}
+#slider .slide:nth-child(5) {
+	background-image: url('images/slideshow/slide-5.jpg');
+}
+#slider .slide:nth-child(6) {
+	background-image: url('images/slideshow/slide-6.jpg');
 }
 
 #slider .pagination {
@@ -347,13 +365,13 @@ h3 {
 	display: block;
 	float: left;
 	margin: 0 10px;
-	height: 2px;
+	height: 4px;
 	background-color: grey;
 	transition: all .3s;
 }
 
 #slider .pagination .pagination-item:hover,
 #slider .pagination .pagination-item.active {
-	height: 5px;
+	height: 8px;
 	background-color: red;
 }

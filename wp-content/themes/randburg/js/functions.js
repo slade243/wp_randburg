@@ -1,23 +1,27 @@
 $(document).ready(function() {
 
-  var slideCount, slideWidth, slideHeight, sliderUlWidth;
+  var slideCount, slideWidth, slideHeight, sliderUlWidth, paginationItemWidth, sliderInterval;
 
   function setCSS() {
      slideCount = $('#slider .slide').length;
      slideWidth = $('#slider .slide').width();
      slideHeight = $('#slider .slide').height();
      sliderUlWidth = slideCount * slideWidth;
+     paginationItemWidth = ($(window).width() / slideCount) - 20;
+
+     if ($('.pagination-item').length > 0) {
+       $('.pagination-item').width(paginationItemWidth);
+     }
 
      $('#slider').css({ width: slideWidth, height: slideHeight });
-     $('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+     $('#slider ul').css({ width: sliderUlWidth});
      $('#slider ul .slide:first-child').addClass('active');
   } setCSS();
 
   $(window).resize(setCSS);
 
   function addPagination() {
-    var pagination = $('#slider .pagination'),
-      itemWidth = ($(window).width() / slideCount) - 20;
+    var pagination = $('#slider .pagination');
 
     for (var i = 0; i < slideCount; i++) {
       $('#slider .slide:nth-child('+ (i + 1) +')').attr('data-position', i + 1);
@@ -26,7 +30,7 @@ $(document).ready(function() {
       item.attr('href', 'javascript:void(0)')
         .attr('data-target', i + 1)
         .addClass('pagination-item')
-        .width(itemWidth);
+        .width(paginationItemWidth);
 
       if (i === 0) {item.addClass('active');}
 
@@ -36,39 +40,9 @@ $(document).ready(function() {
 
   } addPagination();
 
-  // slider
-  function moveLeft() {
-     $('#slider ul').animate({
-        left: + slideWidth
-     }, 300, function () {
-        $('#slider ul .slide:last-child').prependTo('#slider ul');
-        $('#slider ul').css('left', '');
-     });
-
-     $('#slider ul .slide.active').removeClass('active').prev('.slide').addClass('active');
-     $('#slider .pagination-item.active').removeClass('active').prev('.pagination-item').addClass('active');
-  }
-
-  function moveRight() {
-     $('#slider ul').animate({
-        left: "-"+ slideWidth
-     }, 300, function () {
-        $('#slider ul .slide:first-child').appendTo('#slider ul');
-        $('#slider ul').css('left', '');
-     });
-
-     $('#slider ul .slide.active').removeClass('active').next('.slide').addClass('active');
-     if ($('#slider .pagination-item.active').next('.pagination-item').length > 0) {
-       $('#slider .pagination-item.active').removeClass('active').next('.pagination-item').addClass('active');
-     } else {
-       $('#slider .pagination-item.active').removeClass('active');
-       $('#slider .pagination-item:first-child').addClass('active');
-     }
-  }
-
-  function moveTo(position) {
+  // Slider
+  function moveSliderTo(position) {
     var left = (position - 1) * slideWidth;
-    console.log(left);
     $('#slider ul').animate({
       left: - left
     }, 300);
@@ -79,13 +53,15 @@ $(document).ready(function() {
         $(ele).addClass('active');
       }
     });
+  }
 
-    if ($('#slider .pagination-item.active').next('.pagination-item').length > 0) {
-      $('#slider .pagination-item.active').removeClass('active').next('.pagination-item').addClass('active');
-    } else {
-      $('#slider .pagination-item.active').removeClass('active');
-      $('#slider .pagination-item:first-child').addClass('active');
-    }
+  function movePaginationTo(position) {
+    $('.pagination-item').removeClass('active')
+      .each(function(index, ele) {
+        if ($(ele).data('target') == position) {
+          $(ele).addClass('active');
+        }
+      });
   }
 
   $('a.control-prev').click(function(e) {
@@ -99,15 +75,25 @@ $(document).ready(function() {
   });
 
   $('.pagination-item').click(function() {
-    $('.pagination-item.active').removeClass('active');
-    $(this).addClass('active');
-    moveTo($(this).data('target'));
+    var pos = $(this).data('target');
+    moveSliderTo(pos);
+    movePaginationTo(pos)
+    stopSliderInterval();
+    startSliderInterval();
   });
 
-  setInterval(function() {
-    var active = $('#slider .slide.active'),
-      pos = (active.next().length > 0) ? active.next().data('position') : $('#slider .slide:first-child').data('position');
-    moveTo(pos);
-  }, 5000);
+  function startSliderInterval() {
+    sliderInterval = setInterval(function() {
+      var active = $('#slider .slide.active'),
+        pos = (active.next().length > 0) ? active.next().data('position') : $('#slider .slide:first-child').data('position');
+      moveSliderTo(pos);
+      movePaginationTo(pos);
+    }, 5000);
+  } startSliderInterval();
+
+  function stopSliderInterval() {
+    clearInterval(sliderInterval);
+  }
+
 
 });
