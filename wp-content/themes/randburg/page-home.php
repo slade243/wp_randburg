@@ -4,10 +4,10 @@
 */
 
 	get_header();
-	get_template_part('slider'); 
+	get_template_part('slider');
 ?>
 <div class="content">
-	<h3>Services</h3>
+	<h2>Services</h2>
 	<?php get_template_part('category', 'grid'); ?>
 </div>
 

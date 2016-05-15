@@ -1,8 +1,16 @@
 $(document).ready(function() {
 
+  /* CATEGORIES GRID */
+  function setCategoriesGridCSS() {
+    $('#categories-grid .item').each(function(index, ele) {
+      $(ele).height($(ele).width());
+    });
+  } setCategoriesGridCSS();
+
+  /* SLIDER */
   var slideCount, slideWidth, slideHeight, sliderUlWidth, paginationItemWidth, sliderInterval;
 
-  function setCSS() {
+  function setSliderCSS() {
      slideCount = $('#slider .slide').length;
      slideWidth = $('#slider .slide').width();
      slideHeight = $('#slider .slide').height();
@@ -16,9 +24,8 @@ $(document).ready(function() {
      $('#slider').css({ width: slideWidth, height: slideHeight });
      $('#slider ul').css({ width: sliderUlWidth});
      $('#slider ul .slide:first-child').addClass('active');
-  } setCSS();
+  } setSliderCSS();
 
-  $(window).resize(setCSS);
 
   function addPagination() {
     var pagination = $('#slider .pagination');
@@ -40,7 +47,6 @@ $(document).ready(function() {
 
   } addPagination();
 
-  // Slider
   function moveSliderTo(position) {
     var left = (position - 1) * slideWidth;
     $('#slider ul').animate({
@@ -95,5 +101,13 @@ $(document).ready(function() {
     clearInterval(sliderInterval);
   }
 
+
+
+
+
+    $(window).resize(function() {
+      setSliderCSS();
+      setCategoriesGridCSS();
+    });
 
 });

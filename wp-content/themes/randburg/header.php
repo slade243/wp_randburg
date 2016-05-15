@@ -15,6 +15,6 @@
 				</div>
 			</div>
 			<div id="header">
-				<img src="<?php echo get_template_directory_uri() .'/images/randburg-logo.png'; ?>" alt="Custom image" class="customImage" />
+				<img src="<?php echo get_template_directory_uri() .'/images/randburg-logo.png'; ?>" alt="Custom image" class="logo" />
 				<?php wp_nav_menu(array('menu' => 'top_navigation')); ?>
 			</div>
