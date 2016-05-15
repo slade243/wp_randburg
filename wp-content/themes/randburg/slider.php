@@ -1,6 +1,7 @@
 <div id="slider">
   <ul>
-    <li class="slide active"></li>
+    <li class="slide"></li>
+    <li class="slide"></li>
     <li class="slide"></li>
     <li class="slide"></li>
     <li class="slide"></li>
