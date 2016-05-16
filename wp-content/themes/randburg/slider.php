@@ -3,9 +3,6 @@
     <li class="slide"></li>
     <li class="slide"></li>
     <li class="slide"></li>
-    <li class="slide"></li>
-    <li class="slide"></li>
-    <li class="slide"></li>
   </ul>
   <a class="control-prev"></a>
   <a class="control-next"></a>
