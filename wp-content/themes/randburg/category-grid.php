@@ -14,7 +14,7 @@
 					<div class="category-image" style="background-image: url(<?php echo wp_get_attachment_url(get_post_thumbnail_id($page->ID)); ?>)"></div>
 					<div class="category-content">
 						<h3><?php echo $page->post_title; ?></h3>
-						<p>Id mollit voluptate aliquip</p>
+						<p><?php echo get_post_meta($page->ID, '_featured_text', true); ?></p>
 					</div>
 					<div class="category-overlay"></div>
 				</a>
