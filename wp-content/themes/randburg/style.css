@@ -239,7 +239,7 @@ html, body {
 
 /* topBar */
 #topBar {
-	height: 3vw;
+	height: 5%;
 	background-color: #e8e8e8;
 	display: none;
 }
@@ -248,42 +248,19 @@ html, body {
 	width: 25vw;
 	height: 3vw;
 	float: right;
-	margin-right: 5vw;
-	display: flex;
 }
 
-#topBar .topIcons #phoneIcon {
-	background-image: url("images/icons/phone_red_white.png");
+#topBar .topBar-contact {
+	float: right;
+	background-image: url('images/icons/at-sign.svg');
+	background-position: left center;
 	background-repeat: no-repeat;
-	margin-top: 0.4vw;
-	margin-right: 10vw;
-}
-
-#topBar .topIcons #phoneIcon:hover {
-	background-image: url("images/icons/phone_white_red.png");
-	background-repeat: no-repeat;
-}
-
-#topBar .topIcons #atIcon {
-	background-image: url("images/icons/phone_red_white.png");
-	background-repeat: no-repeat;
-	margin-top: 0.4vw;
-	margin-right: 10vw;
-}
-
-#topBar .topIcons #atIcon:hover {
-	background-image: url("images/icons/phone_white_red.png");
-	background-repeat: no-repeat;
-	margin-right: 10vw;
-}
-
-#topBar .topIcons #atIcon span {
-	height: 34px;
-	margin-left: 3vw;
-}
-
-#topBar .topIcons #phoneIcon span {
-	margin-left: 3vw;
+	background-size: 30px 30px;
+	padding-left: 10%;
+	padding-top: 2.2%;
+	margin-top: 1%;
+	height: 30px;
+	width: 50%;
 }
 
 /* Footer */

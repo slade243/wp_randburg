@@ -10,8 +10,8 @@
 		<div id="wrapper">
 			<div id="topBar">
 				<div class=topIcons>
-					<div id="phoneIcon"><span>010203</span></div>
-					<div id="atIcon"><span>test@test.de</span></div>
+					<div class="topBar-contact">PhoneTest</div>
+					<div class="topBar-contact">MailTest</div>
 				</div>
 			</div>
 			<div id="header">
