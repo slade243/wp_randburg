@@ -73,14 +73,14 @@ h3 {
 }
 
 #categories-grid .item a {
-	font-size: 20px;
-  font-weight: 700;
+	font-size: 16px;
+	font-weight: 700;
 	color: #ff0000;
 	text-decoration: none;
 }
 
 /* categories-grid MEDIA */
-@media (max-width: 480px) {
+@media (max-width: 850px) {
 
 	#categories-grid .item a {
 		display: block;
@@ -94,10 +94,18 @@ h3 {
 		width: 100% !important; /* over-ride all li styles */
 		margin: 0 0 20px;
 	}
+	
+	#categories-grid .item .dash span {
+		font-size: 1rem;
+		display: block;
+		padding-top: 10px;
+	}
 }
 
 /* Content */
 .content {
+	margin: 0 auto;
+	width: 70%;
 	padding: 15px;
 }
 .content h2 {
