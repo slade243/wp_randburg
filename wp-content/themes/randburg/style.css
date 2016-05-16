@@ -102,11 +102,7 @@ h3 {
 }
 .content h2 {
 	text-align: center;
-<<<<<<< HEAD
-=======
 	font-size: 2rem;
-
->>>>>>> origin/master
 }
 
 .content {
@@ -138,7 +134,7 @@ h3 {
 	}
 
 	#header .mobile-menu-container {
-		display: none;
+		display: none
 	}
 }
 
@@ -239,13 +235,24 @@ h3 {
 }
 
 #footer img {
-	width: 14%;
+	width: 13%;
 	height: auto;
 }
 
 #footer #logoBox {
 	margin: 0 auto;
 	width: 60%;
+	height: auto;
+}
+
+#footer .cert-SafeContractor {
+	margin-top: 2%;
+	width: 10%;
+	height: auto;
+}
+
+#footer .cert-qms {
+	width: 10%;
 	height: auto;
 }
 
