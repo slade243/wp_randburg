@@ -134,20 +134,20 @@ html, body {
 /* Content */
 .content {
 	margin: 0 auto;
-	width: 80%;
+	width: 77%;
 	padding: 15px;
+	margin-top: 3vw;
+	margin-bottom: 3vw;
 }
 .content h2 {
 	text-align: center;
 	font-size: 2rem;
 }
 
-.content {
-	margin-top: 3vw;
-}
-
 .content::after {
 	clear: both;
+	content: '';
+	display: block;
 }
 
 /* content MEDIA */
@@ -463,3 +463,50 @@ html, body {
 }
 
 /* contact-form */
+.wpcf7 {
+	float: right;
+	width: 50%;
+}
+
+.wpcf7 .wpcf7-form-control {
+	background-color: #b1b1b1;
+	height: 3vw;
+	width: 100%;
+	border: none;
+	margin-bottom: 3%;
+}
+
+.wpcf7-form-control.wpcf7-submit {
+	margin-top: 1vw;
+	width: 25%;
+	background-color: #ff0000;
+	font-size: 2vw;
+	text-transform: uppercase;
+}
+
+.wpcf7-form-control.wpcf7-textarea {
+	height: 25%;
+}
+
+@media (max-width: 767px) {
+	.wpcf7-form-control.wpcf7-submit {
+		width: 50%;
+		height: 5%;
+		font-size: 4vw;
+	}
+}
+
+/* contact-info */
+.contact-info {
+	float: left;
+	width: 40%;
+}
+
+.contact-info .contact-headline {
+	color: #ff0000;
+	font-size: 20px;
+	margin-top: 2vw;
+	border-bottom: 2px solid #b1b1b1;
+}
+
+
