@@ -7,7 +7,7 @@
   get_template_part('banner', 'featured');
 ?>
 <div class="content">
-	<h3>Projects</h3>
+	<h2>Projects</h2>
 	<?php get_template_part('category', 'grid'); ?>
 </div>
 
