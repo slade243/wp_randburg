@@ -144,6 +144,10 @@ html, body {
 	font-size: 2rem;
 }
 
+.content span {
+	color: #ff0000;
+}
+
 .content::after {
 	clear: both;
 	content: '';
@@ -153,7 +157,7 @@ html, body {
 /* content MEDIA */
 @media (max-width: 1280px) {
 	.content {
-		width: 100%;
+		width: 97%;
 	}
 }
 
@@ -170,8 +174,8 @@ html, body {
 
 #header .logo {
 	float: left;
-	height: 75px;
-	width: 250px;
+	height: 50px;
+	width: 200px;
 	margin-left: 1%;
 }
 
@@ -190,7 +194,9 @@ html, body {
 	}
 
 	#header .logo {
-		margin-left: 13%;
+		margin-left: 13%; 
+		height: 75px;
+		width: 250px;
 	}
 }
 
@@ -316,6 +322,7 @@ html, body {
 .bottomBody {
 	min-height: 20vw;
 	border-top: 1px solid #b1b1b1;
+	margin-bottom: 2vw;
 }
 .bottomBody:after {
 	content: ' ';
