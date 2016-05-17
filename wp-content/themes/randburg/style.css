@@ -141,7 +141,8 @@ html, body {
 }
 .content h2 {
 	text-align: center;
-	font-size: 2rem;
+	font-size: 17px;
+	border-bottom: 2px solid #ff0000;
 }
 
 .content span {
@@ -157,7 +158,7 @@ html, body {
 /* content MEDIA */
 @media (max-width: 1280px) {
 	.content {
-		width: 97%;
+		width: 95%;
 	}
 }
 
@@ -260,6 +261,7 @@ html, body {
 	width: 45%;
 	padding-left: 37px;
 	margin: 0 auto;
+	color: #959595;
 }
 
 #topBar .topBar-contact span {
@@ -270,7 +272,6 @@ html, body {
 
 #topBar #phone {
 	background-image: url('images/icons/phone.svg');
-	color: #b1b1b1; 
 }
 
 #topBar #phone:hover {
@@ -279,7 +280,6 @@ html, body {
 
 #topBar #mail {
  	background-image: url('images/icons/mail.svg');
-	color: #b1b1b1;
 }
 
 #topBar #mail:hover {
@@ -358,11 +358,13 @@ html, body {
 #footer .cert-SafeContractor {
 	margin-top: 2%;
 	width: 9%;
+	margin-left: 2%;
 	height: auto;
 }
 
 #footer .cert-qms {
 	width: 9%;
+	margin-left: 2%;
 	height: auto;
 }
 
@@ -375,7 +377,6 @@ html, body {
 		width: 98%;
 	}
 }
-
 
 /* bottomBody */
 .bottomBody {
@@ -445,14 +446,36 @@ html, body {
 	font-size: 16px;
 }
 
-@media (max-width: 767px) {
-/* 	.bottomBody .twitterfeed {
+@media (max-width: 850px) {
+ 	.bottomBody .twitterfeed {
 		clear: both;
+		width: 100%;
+		margin-left: 0%;
+		margin-bottom: 5vw;
 	}
 	
 	.bottomBody .whyus {
 		clear: both;
-	} */
+		width: 100%;
+		margin-bottom: 5vw;
+		margin-right: 0%;
+	} 
+}
+
+@media (max-width: 1280px) {
+	.bottomBody .bottomBodyContent {
+		width: 95%;
+	}
+	
+	.bottomBody .whyus {
+		margin-right: 4.5%;
+		width: 45%;
+	}
+	
+	.bottomBody .twitterfeed {
+		margin-left: 3%;
+		width: 43%;
+	}	
 }
 
 /* topBanner */
