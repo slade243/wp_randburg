@@ -325,7 +325,7 @@ html, body {
 		height: 35px;
 		width: 35px;
 		margin-top: 5px;
-		margin-left: 5px;
+		margin-left: 9px;
 	}
 }
 
@@ -561,6 +561,7 @@ html, body {
 
 /* contact-form */
 .wpcf7 {
+	margin-top: 1vw;
 	float: right;
 	width: 50%;
 }
