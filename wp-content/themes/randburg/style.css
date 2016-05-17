@@ -19,7 +19,7 @@ Text Domain: randburg
 
 html, body {
 	font-family: Raleway, arial;
-	width: 100vw;
+	width: 100%;
 	background-color: #fff;
 }
 
@@ -196,7 +196,7 @@ html, body {
 	}
 
 	#header .logo {
-		margin-left: 13%; 
+		margin-left: 13%;
 		width: 250px;
 	}
 }
@@ -241,13 +241,13 @@ html, body {
 /* topBar */
 #topBar {
 	height: 45px;
-	background-color: #e8e8e8; 
+	background-color: #e8e8e8;
 }
 
 #topBar .topIcons {
 	width: 40%;
 	height: 100%;
-	float: right; 
+	float: right;
 	margin: 0 auto;
 }
 
@@ -304,23 +304,23 @@ html, body {
 	#topBar .topBar-contact {
 		font-size: 10px;
 	}
-	
+
 	#topBar .topIcons {
 		width: 60%;
 	}
-} 
+}
 
 @media (max-width: 767px) {
 	#topBar .topIcons {
 		width: auto;
 		float: left;
 	}
-	
+
 	#topBar .topBar-contact span {
 		display: none;
 		margin: 0 auto;
 	}
-	
+
 	#topBar .topBar-contact  {
 		height: 35px;
 		width: 35px;
@@ -372,7 +372,7 @@ html, body {
 	#footer {
 		height: 10%;
 	}
-	
+
 	#footer #logoBox {
 		width: 98%;
 	}
@@ -450,16 +450,16 @@ html, body {
 	.bottomBody .bottomBodyContent {
 		width: 95%;
 	}
-	
+
 	.bottomBody .whyus {
 		margin-right: 4.5%;
 		width: 45%;
 	}
-	
+
 	.bottomBody .twitterfeed {
 		margin-left: 3%;
 		width: 43%;
-	}	
+	}
 }
 
 @media (max-width: 850px) {
@@ -469,13 +469,13 @@ html, body {
 		margin-left: 0%;
 		margin-bottom: 5vw;
 	}
-	
+
 	.bottomBody .whyus {
 		clear: both;
 		width: 100%;
 		margin-bottom: 5vw;
 		margin-right: 0%;
-	} 
+	}
 }
 
 /* topBanner */
@@ -492,9 +492,8 @@ html, body {
 
 /* Slider */
 #slider {
-	overflow-y: visible;
 	position: relative;
-	overflow-x: hidden;
+	overflow: hidden;
 }
 #slider ul {
   position: relative;
@@ -512,7 +511,7 @@ html, body {
 	margin: 0;
 	padding: 0;
 	height: 100%;
-	width: 100vw;
+	width: 100%;
 	text-align: center;
 
 	background-position: center;
@@ -536,6 +535,34 @@ html, body {
 	background-image: url('images/slideshow/slide-5.jpg');
 }
 
+#slider .control-prev,
+#slider .control-next {
+	position: absolute;
+	height: 60px;
+	width: 60px;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: #75706B;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 30px;
+	opacity: .5;
+	cursor: pointer;
+	transition: all .2s;
+}
+#slider .control-prev:hover,
+#slider .control-next:hover {
+	opacity: 1;
+}
+
+#slider .control-prev {
+	left: 0;
+	background-image: url('images/icons/chevron-left.svg');
+}
+#slider .control-next {
+	right: 0;
+	background-image: url('images/icons/chevron-right.svg');
+}
 
 #slider .pagination {
 	position: absolute;
@@ -606,5 +633,3 @@ html, body {
 	margin-top: 2vw;
 	border-bottom: 2px solid #b1b1b1;
 }
-
-

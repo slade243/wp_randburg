@@ -72,12 +72,18 @@ $(document).ready(function() {
 
   $('a.control-prev').click(function(e) {
      e.preventDefault();
-     moveLeft();
+     var activePos = parseInt($('.pagination-item.active').data('target'));
+     var pos = (activePos === 1) ? slideCount : activePos - 1;
+     moveSliderTo(pos);
+     movePaginationTo(pos);
   });
 
   $('a.control-next').click(function(e) {
-     e.preventDefault();
-     moveRight();
+       e.preventDefault();
+       var activePos = parseInt($('.pagination-item.active').data('target'));
+       var pos = (activePos === slideCount) ? 1 : activePos + 1;
+       moveSliderTo(pos);
+       movePaginationTo(pos);
   });
 
   $('.pagination-item').click(function() {
