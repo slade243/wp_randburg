@@ -273,9 +273,17 @@ html, body {
 	color: #b1b1b1; 
 }
 
+#topBar #phone:hover {
+	background-image: url('images/icons/phone_hover.svg');
+}
+
 #topBar #mail {
  	background-image: url('images/icons/mail.svg');
 	color: #b1b1b1;
+}
+
+#topBar #mail:hover {
+	background-image: url('images/icons/mail_hover.svg');
 }
 
 #topBar .social-media-links {
@@ -437,6 +445,16 @@ html, body {
 	font-size: 16px;
 }
 
+@media (max-width: 767px) {
+/* 	.bottomBody .twitterfeed {
+		clear: both;
+	}
+	
+	.bottomBody .whyus {
+		clear: both;
+	} */
+}
+
 /* topBanner */
 .topBanner {
 	height: 15vw;
@@ -488,6 +506,13 @@ html, body {
 #slider .slide:nth-child(3) {
 	background-image: url('images/slideshow/slide-3.jpg');
 }
+#slider .slide:nth-child(4) {
+	background-image: url('images/slideshow/slide-4.jpg');
+}
+#slider .slide:nth-child(5) {
+	background-image: url('images/slideshow/slide-5.jpg');
+}
+
 
 #slider .pagination {
 	position: absolute;
