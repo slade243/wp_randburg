@@ -61,6 +61,22 @@ $(document).ready(function() {
     });
   }
 
+  function moveSliderLeft(e) {
+    e.preventDefault();
+    var activePos = parseInt($('.pagination-item.active').data('target'));
+    var pos = (activePos === 1) ? slideCount : activePos - 1;
+    moveSliderTo(pos);
+    movePaginationTo(pos);
+  }
+
+  function moveSliderRight(e) {
+    e.preventDefault();
+    var activePos = parseInt($('.pagination-item.active').data('target'));
+    var pos = (activePos === slideCount) ? 1 : activePos + 1;
+    moveSliderTo(pos);
+    movePaginationTo(pos);
+  }
+
   function movePaginationTo(position) {
     $('.pagination-item').removeClass('active')
       .each(function(index, ele) {
@@ -70,26 +86,17 @@ $(document).ready(function() {
       });
   }
 
-  $('a.control-prev').click(function(e) {
-     e.preventDefault();
-     var activePos = parseInt($('.pagination-item.active').data('target'));
-     var pos = (activePos === 1) ? slideCount : activePos - 1;
-     moveSliderTo(pos);
-     movePaginationTo(pos);
-  });
 
-  $('a.control-next').click(function(e) {
-       e.preventDefault();
-       var activePos = parseInt($('.pagination-item.active').data('target'));
-       var pos = (activePos === slideCount) ? 1 : activePos + 1;
-       moveSliderTo(pos);
-       movePaginationTo(pos);
-  });
+
+  $('a.control-prev').click(moveSliderLeft);
+  $('a.control-next').click(moveSliderRight);
+  $('#slider').on('swipeleft', moveSliderLeft);
+  $('#slider').on('swiperight', moveSliderRight);
 
   $('.pagination-item').click(function() {
     var pos = $(this).data('target');
     moveSliderTo(pos);
-    movePaginationTo(pos)
+    movePaginationTo(pos);
     stopSliderInterval();
     startSliderInterval();
   });
