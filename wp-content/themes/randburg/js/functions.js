@@ -90,8 +90,8 @@ $(document).ready(function() {
 
   $('a.control-prev').click(moveSliderLeft);
   $('a.control-next').click(moveSliderRight);
-  $('#slider').on('swipeleft', moveSliderLeft);
-  $('#slider').on('swiperight', moveSliderRight);
+  $('#slider').on('swipeleft', moveSliderRight);
+  $('#slider').on('swiperight', moveSliderLeft);
 
   $('.pagination-item').click(function() {
     var pos = $(this).data('target');
