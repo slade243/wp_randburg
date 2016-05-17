@@ -164,6 +164,7 @@ html, body {
 /* Header */
 #header {
 	padding: 20px 10px;
+	margin-bottom: 3%;
 }
 
 #header:after {
@@ -174,7 +175,6 @@ html, body {
 
 #header .logo {
 	float: left;
-	height: 50px;
 	width: 200px;
 	margin-left: 1%;
 }
@@ -183,6 +183,7 @@ html, body {
 	float: right;
  	display: none;
 	margin-right: 13%;
+	margin-top: 12.5px;
 }
 @media (min-width: 767px) {
 	#header .menu-main-menu-container {
@@ -195,7 +196,6 @@ html, body {
 
 	#header .logo {
 		margin-left: 13%; 
-		height: 75px;
 		width: 250px;
 	}
 }
@@ -239,28 +239,92 @@ html, body {
 
 /* topBar */
 #topBar {
-	height: 5%;
-	background-color: #e8e8e8;
-	display: none;
+	height: 45px;
+	background-color: #e8e8e8; 
 }
 
 #topBar .topIcons {
-	width: 25vw;
-	height: 3vw;
-	float: right;
+	width: 40%;
+	height: 100%;
+	float: right; 
+	margin: 0 auto;
 }
 
 #topBar .topBar-contact {
+ 	font-size: 11px;
 	float: right;
-	background-image: url('images/icons/at-sign.svg');
 	background-position: left center;
 	background-repeat: no-repeat;
-	background-size: 30px 30px;
-	padding-left: 10%;
-	padding-top: 2.2%;
-	margin-top: 1%;
-	height: 30px;
-	width: 50%;
+	background-size: 35px;
+	height: 100%;
+	width: 45%;
+	padding-left: 37px;
+	margin: 0 auto;
+}
+
+#topBar .topBar-contact span {
+	line-height: 45px;
+	display: inline-block;
+    margin: 0 18px 0 8px;
+}
+
+#topBar #phone {
+	background-image: url('images/icons/phone.svg');
+	color: #b1b1b1; 
+}
+
+#topBar #mail {
+ 	background-image: url('images/icons/mail.svg');
+	color: #b1b1b1;
+}
+
+#topBar .social-media-links {
+	float: left;
+}
+
+#topBar .social-media-links a {
+	text-decoration: none;
+}
+
+#topBar .social-media-images {
+	height: 35px;
+	margin-top: 5px;
+    margin-left: 5px;
+}
+
+@media (max-width: 1279px) {
+	#topBar .topBar-contact {
+		font-size: 10px;
+	}
+	
+	#topBar .topIcons {
+		width: 60%;
+	}
+} 
+
+@media (max-width: 767px) {
+	#topBar .topIcons {
+		width: auto;
+		float: left;
+	}
+	
+	#topBar .topBar-contact span {
+		display: none;
+		margin: 0 auto;
+	}
+	
+	#topBar .topBar-contact  {
+		height: 35px;
+		width: 35px;
+		margin-top: 5px;
+		margin-left: 5px;
+	}
+}
+
+#topBar::after {
+	clear: both;
+	content: '';
+	display: block;
 }
 
 /* Footer */
@@ -334,14 +398,14 @@ html, body {
 .bottomBody .whyus {
 	float: right;
 	width: 38%;
-	margin-right: 4%;
+	margin-right: 6%;
 }
 
 /* Twitterfeed */
 .twitterfeed {
-	margin-left: 3%;
-	float: left;
+	margin-left: 5%;
 	width: 28%;
+	float: left;
 	font-size: 13px;
 }
 
@@ -413,15 +477,6 @@ html, body {
 }
 #slider .slide:nth-child(3) {
 	background-image: url('images/slideshow/slide-3.jpg');
-}
-#slider .slide:nth-child(4) {
-	background-image: url('images/slideshow/slide-4.jpg');
-}
-#slider .slide:nth-child(5) {
-	background-image: url('images/slideshow/slide-5.jpg');
-}
-#slider .slide:nth-child(6) {
-	background-image: url('images/slideshow/slide-6.jpg');
 }
 
 #slider .pagination {

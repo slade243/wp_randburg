@@ -9,9 +9,25 @@
 	<body>
 		<div id="wrapper">
 			<div id="topBar">
+				<div class="social-media-links">
+					<a href="https://twitter.com/search?q=randburgUK&src=typd" target="_blank">
+						<img src="<?php echo get_template_directory_uri() .'/images/icons/twitter.ico'; ?>" alt="Custom image" class="social-media-images" />
+					</a>
+					<a href="https://uk.linkedin.com/in/randburgelectrical" target="_blank">
+						<img src="<?php echo get_template_directory_uri() .'/images/icons/linkedin.ico'; ?>" alt="Custom image" class="social-media-images" />
+					</a>
+				</div>
 				<div class=topIcons>
-					<div class="topBar-contact">PhoneTest</div>
-					<div class="topBar-contact">MailTest</div>
+					<a href="tel:02089162297">
+						<div class="topBar-contact" id="phone">
+							<span>+44 (0)208 916 2297</span>
+						</div>
+					</a>
+					<a href="mailto:office@randburg.co.uk">
+						<div class="topBar-contact" id="mail">
+							<span>office@randburg.co.uk</span>
+						</div>
+					</a>
 				</div>
 			</div>
 			<div id="header">

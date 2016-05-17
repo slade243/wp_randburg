@@ -2,7 +2,7 @@
 	<div class="bottomBodyContent">
 		<div class="twitterfeed">
 			<h1><span>TWITTER FEED</span></h1>
-			<?php echo do_shortcode('[custom-twitter-feeds screenname=Zer0D4y num=9]'); ?>
+			<?php //echo do_shortcode('[custom-twitter-feeds screenname=Zer0D4y num=9]'); ?>
 		</div>
 		<div class="whyus">
 			<h1><span>Why us</span></h1>
