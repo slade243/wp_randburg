@@ -499,13 +499,14 @@ html, body {
 /* Slider */
 #slider {
 	position: relative;
-	overflow: hidden;
+	overflow-y: hidden;
+	max-width: 100%;
 }
 #slider ul {
   position: relative;
   margin: 0;
   padding: 0;
-  height: 423px;
+  height: 70vh;
   list-style: none;
 	left: 0;
 }
@@ -517,7 +518,6 @@ html, body {
 	margin: 0;
 	padding: 0;
 	height: 100%;
-	width: 100%;
 	text-align: center;
 
 	background-position: center;

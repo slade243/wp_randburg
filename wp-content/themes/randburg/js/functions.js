@@ -12,17 +12,19 @@ $(document).ready(function() {
 
   function setSliderCSS() {
      slideCount = $('#slider .slide').length;
-     slideWidth = $('#slider .slide').width();
+     slideWidth = $(window).width();
      slideHeight = $('#slider .slide').height();
      sliderUlWidth = slideCount * slideWidth;
      paginationItemWidth = ($(window).width() / slideCount) - 20;
+
+     $('#slider .slide').width(slideWidth);
 
      if ($('.pagination-item').length > 0) {
        $('.pagination-item').width(paginationItemWidth);
      }
 
-     $('#slider').css({ width: slideWidth, height: slideHeight });
-     $('#slider ul').css({ width: sliderUlWidth});
+     $('#slider').css({width: slideWidth, height: slideHeight});
+     $('#slider ul').css({width: sliderUlWidth});
      $('#slider ul .slide:first-child').addClass('active');
   } setSliderCSS();
 
@@ -67,6 +69,8 @@ $(document).ready(function() {
     var pos = (activePos === 1) ? slideCount : activePos - 1;
     moveSliderTo(pos);
     movePaginationTo(pos);
+    stopSliderInterval();
+    startSliderInterval();
   }
 
   function moveSliderRight(e) {
@@ -75,6 +79,8 @@ $(document).ready(function() {
     var pos = (activePos === slideCount) ? 1 : activePos + 1;
     moveSliderTo(pos);
     movePaginationTo(pos);
+    stopSliderInterval();
+    startSliderInterval();
   }
 
   function movePaginationTo(position) {
