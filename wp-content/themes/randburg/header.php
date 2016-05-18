@@ -9,6 +9,7 @@
 	<body>
 		<div id="wrapper">
 			<div id="topBar">
+				<div class="mobile-menu-btn"></div>
 				<div class="social-media-links">
 					<a href="https://twitter.com/search?q=randburgUK&src=typd" target="_blank">
 						<img src="<?php echo get_template_directory_uri() .'/images/icons/twitter.svg'; ?>" alt="Custom image" class="social-media-images" />
@@ -34,3 +35,8 @@
 				<img src="<?php echo get_template_directory_uri() .'/images/randburg-logo.png'; ?>" alt="Custom image" class="logo" />
 				<?php wp_nav_menu(array('menu' => 'top_navigation')); ?>
 			</div>
+
+			<aside id="mobile-menu">
+				<span class="close"></span>
+				<?php wp_nav_menu(array('menu' => 'top_navigation')); ?>
+			</aside>
