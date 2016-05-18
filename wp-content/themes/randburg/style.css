@@ -535,7 +535,7 @@ html, body {
 
 #slider {
   position: relative;
-  overflow-y: hidden;
+	overflow: hidden;
   max-width: 100%;
 }
 #slider ul {
