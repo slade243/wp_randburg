@@ -148,6 +148,15 @@ html, body {
   width: 200px;
   padding: 7px;
   margin: 0 auto;
+	text-align: center;
+	font-size: 30px;
+	color: #b1b1b1;
+	text-transform: uppercase;
+	border-bottom: 2px solid #b1b1b1;
+	border-top: 2px solid #b1b1b1;
+	width: 300px;
+	padding: 7px;
+	margin: 0 auto;
 }
 .content span {
   color: rgb(242, 38, 19);
@@ -156,6 +165,10 @@ html, body {
   clear: both;
   content: '';
   display: block;
+}
+
+.content p {
+	margin-bottom: 10px;
 }
 
 /* content MEDIA */
@@ -422,6 +435,15 @@ html, body {
 .twitterfeed .ctf-tweet-text {
   font-size: 16px;
 }
+<<<<<<< HEAD
+=======
+
+.ctf-author-avatar img {
+	width: 20px;
+	height: 20px;
+}
+
+>>>>>>> origin/master
 @media (max-width: 1280px) {
   .bottomBody .bottomBodyContent {
     width: 95%;
@@ -592,8 +614,35 @@ html, body {
   width: 40%;
 }
 .contact-info .contact-headline {
+<<<<<<< HEAD
   color: rgb(242, 38, 19);
   font-size: 20px;
   margin-top: 2vw;
   border-bottom: 2px solid #b1b1b1;
+=======
+	color: #ff0000;
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 2vw;
+	margin-bottom: 10px;
+	border-bottom: 2px solid #b1b1b1;
+>>>>>>> origin/master
+}
+
+.contact-info::after {
+	clear: both;
+	content: '';
+}
+
+@media (max-width: 850px) {
+ 	.contact-info {
+		clear: both;
+		width: 100%;
+		margin-bottom: 30px;
+	}
+
+	.wpcf7 {
+		clear: both;
+		width: 100%;
+	}
 }

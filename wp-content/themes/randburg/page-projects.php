@@ -4,7 +4,6 @@
 */
 
   get_header();
-  get_template_part('banner', 'featured');
 ?>
 <div class="content">
 	<h4>Projects</h4>
