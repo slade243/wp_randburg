@@ -7,7 +7,9 @@
 ?>
 
 <div class="content">
-
+	
+	<h2><?php get_the_title() ?></h2>
+	
 	<?php
       while ( have_posts() ) : the_post();
         ?>
