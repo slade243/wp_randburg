@@ -169,6 +169,12 @@ html, body {
   }
 }
 
+@media (max-width: 768px) {
+	.content h4 {
+		margin-bottom: 20px;
+	}
+}
+
 /* Header */
 #header {
   padding: 20px 10px;
@@ -482,15 +488,12 @@ html, body {
 .twitterfeed .ctf-tweet-text {
   font-size: 16px;
 }
-<<<<<<< HEAD
-=======
 
 .ctf-author-avatar img {
 	width: 20px;
 	height: 20px;
 }
 
->>>>>>> origin/master
 @media (max-width: 1280px) {
   .bottomBody .bottomBodyContent {
     width: 95%;
@@ -523,6 +526,8 @@ html, body {
 
 .topBanner {
   height: 15vw;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /* contact-form */
