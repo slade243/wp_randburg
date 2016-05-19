@@ -7,7 +7,7 @@
 	get_template_part('slider');
 ?>
 <div class="content">
-	<h4>Services</h4>
+	<h2 class="headline">Services</h2>
 	<?php get_template_part('category', 'grid'); ?>
 </div>
 

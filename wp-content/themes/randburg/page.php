@@ -3,7 +3,6 @@
 	get_template_part('banner', 'featured');
 ?>
 <div class="content">
-  <main id="main" class="site-main" role="main">
 
 	<?php
       while ( have_posts() ) : the_post();
@@ -14,7 +13,6 @@
         <?php
       endwhile;
       ?>
-  </main><!-- .site-main -->
 </div><!-- .content-area -->
 
 <?php

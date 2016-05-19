@@ -143,7 +143,7 @@ body.no-scroll {
   margin-top: 3vw;
   margin-bottom: 3vw;
 }
-.content h4 {
+.content .headline {
   text-align: center;
   font-size: 30px;
   color: #b1b1b1;
@@ -447,9 +447,15 @@ body.no-scroll {
   clear: both;
 }
 .bottom-content > div {
-	float: left;
-	width: 50%;
-	padding: 0 10px;
+	width: 100%;
+	padding: 20px 10px;
+}
+@media (min-width: 768px) {
+  .bottom-content > div {
+    float: left;
+    width: 50%;
+    padding: 0 10px;
+  }
 }
 
 .bottom-content h3 {
@@ -575,75 +581,61 @@ body.no-scroll {
 }
 
 /* contact-form */
-
 .wpcf7 {
-  margin-top: 1vw;
-  float: right;
-  width: 50%;
+  width: 100%;
 }
 .wpcf7 .wpcf7-form-control {
-  background-color: #b1b1b1;
-  height: 3vw;
+  height: 38px;
   width: 100%;
-  border: none;
-  margin-bottom: 3%;
+  border: 1px solid #b1b1b1;
+  margin: 5px 0 20px;
+  padding: 5px;
+  font-size: 1.2em;
+  line-height: 38px;
+  resize: vertical;
+}
+.wpcf7-form-control.wpcf7-textarea {
+  min-height: 200px;
 }
 .wpcf7-form-control.wpcf7-submit {
-  margin-top: 1vw;
-  width: 20%;
+  margin-top: 20px;
+  display: inline-block;
+  width: auto;
+  padding: 0 20px;
   background-color: rgb(242, 38, 19);
   font-size: 20px;
   text-transform: uppercase;
-}
-.wpcf7-form-control.wpcf7-textarea {
-  height: 25%;
-}
-@media (max-width: 767px) {
-  .wpcf7-form-control.wpcf7-submit {
-    width: 50%;
-    height: 5%;
-    font-size: 4vw;
-  }
+	color: #fff;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
 }
 
 /* contact-info */
-
 .contact-info {
-  float: left;
-  width: 40%;
+  width: 100%;
 }
 .contact-info .contact-headline {
-<<<<<<< HEAD
-  color: rgb(242, 38, 19);
-  font-size: 20px;
-  margin-top: 2vw;
-  border-bottom: 2px solid #b1b1b1;
-=======
-	color: #ff0000;
 	font-size: 20px;
 	font-weight: bold;
 	margin-top: 2vw;
 	margin-bottom: 10px;
 	border-bottom: 2px solid #b1b1b1;
->>>>>>> origin/master
 }
-
 .contact-info::after {
 	clear: both;
 	content: '';
 }
 
-@media (max-width: 850px) {
- 	.contact-info {
-		clear: both;
-		width: 100%;
-		margin-bottom: 30px;
-	}
-
-	.wpcf7 {
-		clear: both;
-		width: 100%;
-	}
+@media (min-width: 850px) {
+ 	.wpcf7 {
+    float: right;
+    width: 50%;
+  }
+  .contact-info {
+    float: left;
+    width: 40%;
+  }
 }
 
 
