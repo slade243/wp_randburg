@@ -31,8 +31,8 @@
 			<img src="<?php echo get_template_directory_uri() .'/images/certificates/niceic_domestic_installer.png'; ?>" alt="Custom image" class="customImage" />
 			<img src="<?php echo get_template_directory_uri() .'/images/certificates/has.png'; ?>" alt="Custom image" class="customImage" />
 			<img src="<?php echo get_template_directory_uri() .'/images/certificates/trust_mark.png'; ?>" alt="Custom image" class="customImage" />
-			<img src="<?php echo get_template_directory_uri() .'/images/certificates/ISO9001Registered.png'; ?>" alt="Custom image" class="special-logos" />
-			<img src="<?php echo get_template_directory_uri() .'/images/certificates/SafeContractor-Roundel-R.png'; ?>" alt="Custom image" class="special-logos" />
+			<img src="<?php echo get_template_directory_uri() .'/images/certificates/ISO9001Registered.png'; ?>" alt="Custom image" class="cert-qms" />
+			<img src="<?php echo get_template_directory_uri() .'/images/certificates/SafeContractor-Roundel-R.png'; ?>" alt="Custom image" class="cert-SafeContractor" />
 		</div>
 	</div>
 </div><!-- #wrapper -->
