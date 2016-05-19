@@ -33,7 +33,7 @@
 				</div>
 			</div>
 			<div id="header">
-				<a href="<?php site_url(); ?>">
+				<a href="<?php echo get_site_url(); ?>">
 					<img src="<?php echo get_template_directory_uri() .'/images/randburg-logo.png'; ?>" alt="Custom image" class="logo" />
 				</a>
 				<?php wp_nav_menu(array('menu' => 'top_navigation')); ?>
