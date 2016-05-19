@@ -134,10 +134,12 @@ $(document).ready(function() {
   // Mobile Menu
   $('.mobile-menu-btn').click(function(e) {
     $('#mobile-menu').addClass('active');
+    $('body').addClass('no-scroll');
   });
 
   $('#mobile-menu .close').click(function(e) {
     $('#mobile-menu').removeClass('active');
+    $('body').removeClass('no-scroll');
   });
 
 

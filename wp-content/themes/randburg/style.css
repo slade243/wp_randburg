@@ -22,6 +22,12 @@ html, body {
   background-color: #fff;
 }
 
+body.no-scroll {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
 /* Categories Grid */
 
 #categories-grid {
@@ -698,3 +704,29 @@ html, body {
 		width: 100%;
 	}
 }
+
+
+
+
+/* ICONS */
+/* Icons from directory "" */
+.icon-chevron-left,.icon-chevron-left\:regular{background-image:url('images/icons/icons.svg');background-position:0 0;background-repeat:no-repeat}
+.icon-chevron-left-dims{width:48px;height:64px}
+.icon-chevron-right,.icon-chevron-right\:regular{background-image:url('images/icons/icons.svg');background-position:0 -64px;background-repeat:no-repeat}
+.icon-chevron-right-dims{width:48px;height:64px}
+.icon-close,.icon-close\:regular{background-image:url('images/icons/icons.svg');background-position:0 -128px;background-repeat:no-repeat}
+.icon-close-dims{width:64px;height:64px}
+.icon-linkedin,.icon-linkedin\:regular{background-image:url('images/icons/icons.svg');background-position:0 -192px;background-repeat:no-repeat}
+.icon-linkedin-dims{width:300px;height:300px}
+.icon-mail,.icon-mail\:regular{background-image:url('images/icons/icons.svg');background-position:0 -492px;background-repeat:no-repeat}
+.icon-mail-dims{width:40px;height:40px}
+.icon-mail_hover,.icon-mail_hover\:regular{background-image:url('images/icons/icons.svg');background-position:0 -532px;background-repeat:no-repeat}
+.icon-mail_hover-dims{width:40px;height:40px}
+.icon-menu,.icon-menu\:regular{background-image:url('images/icons/icons.svg');background-position:0 -572px;background-repeat:no-repeat}
+.icon-menu-dims{width:64px;height:64px}
+.icon-phone,.icon-phone\:regular{background-image:url('images/icons/icons.svg');background-position:0 -636px;background-repeat:no-repeat}
+.icon-phone-dims{width:40px;height:40px}
+.icon-phone_hover,.icon-phone_hover\:regular{background-image:url('images/icons/icons.svg');background-position:0 -676px;background-repeat:no-repeat}
+.icon-phone_hover-dims{width:40px;height:40px}
+.icon-twitter,.icon-twitter\:regular{background-image:url('images/icons/icons.svg');background-position:0 -716px;background-repeat:no-repeat}
+.icon-twitter-dims{width:67px;height:67px}
