@@ -147,16 +147,7 @@ html, body {
   border-top: 2px solid #b1b1b1;
   width: 200px;
   padding: 7px;
-  margin: 0 auto;
-	text-align: center;
-	font-size: 30px;
-	color: #b1b1b1;
-	text-transform: uppercase;
-	border-bottom: 2px solid #b1b1b1;
-	border-top: 2px solid #b1b1b1;
-	width: 300px;
-	padding: 7px;
-	margin: 0 auto;
+	margin: 0 auto 20px;
 }
 .content span {
   color: rgb(242, 38, 19);
@@ -265,6 +256,12 @@ html, body {
 	background-size: contain;
 }
 
+@media (min-width: 768px) {
+	#topBar .mobile-menu-btn {
+		display: none;
+	}
+}
+
 #mobile-menu {
 	width: 100vw;
 	height: 100vh;
@@ -345,6 +342,11 @@ html, body {
 }
 #topBar .social-media-links {
   float: right;
+}
+@media (min-width: 768px) {
+	#topBar .social-media-links {
+		float: left;
+	}
 }
 #topBar .social-media-links a {
   text-decoration: none;

@@ -2,6 +2,8 @@
 	<head>
 		<meta charset="uft-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="" />
+
 		<title>Randburg</title>
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 	</head>
@@ -32,7 +34,9 @@
 				</div>
 			</div>
 			<div id="header">
-				<img src="<?php echo get_template_directory_uri() .'/images/randburg-logo.png'; ?>" alt="Custom image" class="logo" />
+				<a href="<?php site_url(); ?>">
+					<img src="<?php echo get_template_directory_uri() .'/images/randburg-logo.png'; ?>" alt="Custom image" class="logo" />
+				</a>
 				<?php wp_nav_menu(array('menu' => 'top_navigation')); ?>
 			</div>
 
