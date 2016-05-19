@@ -7,7 +7,7 @@
 	get_template_part('slider');
 ?>
 <div class="content">
-	<h1>Randburg electrical services</h1>
+	<h1 class="main-headline">Randburg electrical services</h1>
 	<?php
 		while ( have_posts() ) : the_post();
     ?>

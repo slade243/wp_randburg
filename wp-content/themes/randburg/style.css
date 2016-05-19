@@ -153,8 +153,21 @@ body.no-scroll {
   border-top: 2px solid #b1b1b1;
   width: 200px;
   padding: 7px;
-	margin: 0 auto 20px;
+  margin: 0 auto 20px;
 }
+
+.content .main-headline {
+  text-align: center;
+  font-size: 30px;
+  color: #b1b1b1;
+  text-transform: uppercase;
+  border-bottom: 2px solid #b1b1b1;
+  border-top: 2px solid #b1b1b1;
+  width: 600px;
+  padding: 7px;
+  margin: 0 auto 20px;
+}
+
 .content span {
   color: rgb(242, 38, 19);
 }
@@ -176,8 +189,13 @@ body.no-scroll {
 }
 
 @media (max-width: 768px) {
-	.content h4 {
+	.content .headline {
 		margin-bottom: 20px;
+	}
+	
+	.content .main-headline {
+		width: 300px;
+		font-size: 20px;
 	}
 }
 
