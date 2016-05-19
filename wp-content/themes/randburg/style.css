@@ -142,7 +142,6 @@ body.no-scroll {
   padding: 15px;
   margin-top: 3vw;
   margin-bottom: 3vw;
-  text-align: justify;
 }
 .content .headline {
   text-align: center;
@@ -182,6 +181,7 @@ body.no-scroll {
 }
 
 .content .page-content {
+	text-align: justify;
 	margin-bottom: 40px;
 }
 
