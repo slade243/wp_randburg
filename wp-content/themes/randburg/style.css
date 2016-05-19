@@ -509,6 +509,7 @@ body.no-scroll {
 
 .whyus-content p {
 	margin-bottom: 10px;
+	text-align: justify;
 }
 
 /* top-banner */
