@@ -9,7 +9,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 	<body>
 		<div id="wrapper">
-			<div id="topBar">
+			<div id="top-bar">
 				<div class="mobile-menu-btn"></div>
 				<div class="social-media-links">
 					<a href="https://twitter.com/RandburgUK" target="_blank">
@@ -19,14 +19,14 @@
 						<img src="<?php echo get_template_directory_uri() .'/images/icons/linkedin.svg'; ?>" alt="Custom image" class="social-media-images" />
 					</a>
 				</div>
-				<div class=topIcons>
+				<div class=top-icons>
 					<a href="tel:02089162297">
-						<div class="topBar-contact" id="phone">
+						<div class="top-bar-contact" id="phone">
 							<span>+44 (0)208 916 2297</span>
 						</div>
 					</a>
 					<a href="mailto:office@randburg.co.uk">
-						<div class="topBar-contact" id="mail">
+						<div class="top-bar-contact" id="mail">
 							<span>office@randburg.co.uk</span>
 						</div>
 					</a>
