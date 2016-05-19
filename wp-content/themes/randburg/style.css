@@ -433,16 +433,20 @@ body.no-scroll {
 @media (max-width: 767px) {
 	#footer {
 		height: 150px;
-	}	
-	
+	}
+
 	#footer #logo-container {
 		width: 300px;
 	}
-  
+
 	#footer img {
 		width: 70px;
 		height: auto;
 	}
+  #footer li:nth-child(3):after {
+    content: '';
+    display: block;
+  }
 
 	#footer .cubic-cert {
 		width: 50px;
