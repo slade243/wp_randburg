@@ -1,12 +1,13 @@
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="uft-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<title>Randburg Electrical Services</title>
+		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 	</head>
-	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 	<body>
 		<div id="wrapper">
 			<div id="top-bar">
